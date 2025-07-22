@@ -1,0 +1,56 @@
+.theme-light {
+  --accents-primary: #273BE2;
+  --accents-secondary: #DD3F2B;
+  --accents-gradient: linear-gradient(103.04deg, #DD3F2B 10.42%, #273BE2 100%);
+  --neutrals-grey: #8F8A7C;
+  --neutrals-grey-2: #ADA899;
+  --neutrals-grey-3: #C7C1AF;
+  --neutrals-grey-4: #D1CBB8;
+  --neutrals-grey-5: #E5DFCA;
+  --neutrals-grey-6: #F2EBD5;
+  --neutrals-white: #FAF4E1;
+  --neutrals-black: #121110;
+  --backgrounds-priamry: #FAF4E1;
+  --backgrounds-secondary: #F2EBD5;
+  --backgrounds-teretiary: #FAF4E1;
+  --text-primary: #121110;
+  --text-secondary: rgba(41, 39, 35, 0.6);
+  --text-tertiary: rgba(41, 39, 35, 0.3);
+  --text-quaternary: rgba(41, 39, 35, 0.18);
+  --fills-primary: rgba(128, 124, 113, 0.2);
+  --fills-secondary: rgba(128, 124, 113, 0.16);
+  --fills-tertiary: rgba(128, 124, 113, 0.12);
+  --fills-quaternary: rgba(128, 124, 113, 0.08);
+  --separators-transparent: rgba(153, 145, 122, 0.3);
+}
+
+.theme-dark {
+  --accents-primary: #FFC922;
+  --accents-secondary: #DD3F2B;
+  --accents-gradient: linear-gradient(103.04deg, #DD3F2B 10.42%, #FFC922 100%);
+  --neutrals-grey: #8F8A7C;
+  --neutrals-grey-2: #615E54;
+  --neutrals-grey-3: #45433C;
+  --neutrals-grey-4: #383631;
+  --neutrals-grey-5: #292723;
+  --neutrals-grey-6: #1A1815;
+  --neutrals-black: #121110;
+  --neutrals-white: #FAF4E1;
+  --backgrounds-priamry: #121110;
+  --backgrounds-secondary: #1A1815;
+  --backgrounds-teretiary: #292723;
+  --backgrounds-primary-el: #1A1815;
+  --backgrounds-secondary-el: #292723;
+  --backgrounds-tertiary-el: #383631;
+  --text-primary: #FAF4E1;
+  --text-secondary: rgba(229, 223, 202, 0.6);
+  --text-tertiary: rgba(229, 223, 202, 0.3);
+  --text-quaternary: rgba(229, 223, 202, 0.16);
+  --fills-primary: rgba(128, 124, 113, 0.36);
+  --fills-secondary: rgba(128, 124, 113, 0.32);
+  --fills-tertiary: rgba(128, 124, 113, 0.24);
+  --fills-quaternary: rgba(128, 124, 113, 0.18);
+  --separators-transparent: rgba(51, 50, 49, 0.6);
+}
+
+/*# sourceMappingURL=style.css.map */

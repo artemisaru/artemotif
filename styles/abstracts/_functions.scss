@@ -1,0 +1,12 @@
+@use '../themes/themes' as *;
+
+// Generate CSS variables per theme
+@each $theme-name, $theme-map in $themes {
+    .theme-#{$theme-name} {
+        @each $group, $tokens in $theme-map {
+            @each $name, $value in $tokens {
+                --#{$group}-#{$name}: #{$value};
+            }
+        }
+    }
+}
