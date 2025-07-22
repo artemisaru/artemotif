@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Text Styles
+.display-lg {
+  @include responsive-font-style(h1);
+}
+
+.display-sm {
+  @include responsive-font-style(h2);
+}
+
+.headline-lg {
+  @include responsive-font-style(h3);
+}
+
+.headline-sm {
+  @include responsive-font-style(h4);
+}
+
+.subheadline-lg {
+  @include responsive-font-style(h5);
+}
+
+.subheadline-sm {
+  @include responsive-font-style(h6);
+}
+
+.body-lg {
+  @include responsive-font-style(body);
+}
+
+.body-sm {
+  @include responsive-font-style(b-small);
+}
+
+.label-lg {
+  @include responsive-font-style(t-label);
+}
+
+.label-sm {
+  @include responsive-font-style(b-small);
+}

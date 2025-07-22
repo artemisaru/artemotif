@@ -1,11 +1,11 @@
-// Typography
+// Breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
-$primary-font: 'Aspekta Variable';
-$accent-font: 'Playfair Display';
+// COLORS
 
-// Colors
 // Brand Color Palette
-
 $brand-black: #121110; // Chinese Black
 $brand-white: #FAF4E1; // Old Lace
 $brand-blue: #273BE2; // Palatinate Blue
@@ -16,7 +16,6 @@ $brand-gradient-1: linear-gradient(103.04deg, #DD3F2B 10.42%, #273BE2 100%);
 $brand-gradient-2: linear-gradient(103.04deg, #DD3F2B 10.42%, #FFC922 100%);
 
 // Brand Neutrals
-
 $grey-n6: #1A1815;
 $grey-n5: #292723;
 $grey-n4: #383631;
@@ -28,3 +27,106 @@ $grey-3: #C7C1AF;
 $grey-4: #D1CBB8;
 $grey-5: #E5DFCA;
 $grey-6: #F2EBD5;
+
+// TYPOGRAPHY
+
+// Font Families
+$primary-font: 'Aspekta Variable';
+$accent-font: 'Playfair Display';
+
+// Font Styles
+
+// Desktop Font Styles
+$font-sizes-desktop: (
+  h1: 5.610rem,
+  h2: 4.209rem,
+  h3: 3.157rem,
+  h4: 2.369rem,
+  h5: 1.777rem,
+  h6: 1.333rem,
+  body: 1.000rem,
+  t-label: 0.875rem,
+  b-small: 0.750rem,
+);
+
+$line-heights-desktop: (
+  h1: 100px,
+  h2: 80px,
+  h3: 60px,
+  h4: 44px,
+  h5: 36px,
+  h6: 28px,
+  body: 20px,
+  t-label: 20px,
+  b-small: 16px,
+);
+
+// Tablet Font Styles
+$font-sizes-tablet: (
+  h1: 4.209rem,
+  h2: 3.157rem,
+  h3: 2.735rem,
+  h4: 2.052rem,
+  h5: 1.539rem,
+  h6: 1.155rem,
+  body: 1.000rem,
+  t-label: 0.875rem,
+  b-small: 0.750rem,
+);
+
+$line-heights-tablet: (
+  h1: 80px,
+  h2: 60px,
+  h3: 52px,
+  h4: 40px,
+  h5: 32px,
+  h6: 24px,
+  body: 20px,
+  t-label: 20px,
+  b-small: 16px,
+);
+
+// Mobile Font Styles
+$font-sizes-mobile: (
+  h1: 3.157rem,
+  h2: 2.369rem,
+  h3: 2.052rem,
+  h4: 1.777rem,
+  h5: 1.333rem,
+  h6: 1.155rem,
+  body: 1.000rem,
+  t-label: 0.875rem,
+  b-small: 0.750rem,
+);
+
+$line-heights-mobile: (
+  h1: 60px,
+  h2: 44px,
+  h3: 40px,
+  h4: 36px,
+  h5: 28px,
+  h6: 24px,
+  body: 20px,
+  t-label: 20px,
+  b-small: 16px,
+);
+
+// Letter Spacings
+$letter-spacings: (
+  h1: -0.25px,
+  h2: -0.2px,
+  h3: -0.2px,
+  h4: 0px,
+  h5: 0px,
+  h6: 0.2px,
+  body: 0.2px,
+  t-label: 0.3px,
+  b-small: 0.3px
+);
+
+// Font Weights
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
