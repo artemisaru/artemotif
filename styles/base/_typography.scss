@@ -2,11 +2,11 @@
 @use '../abstracts/mixins' as *;
 
 // Text Styles
-.t-primary {
+.font-primary {
   font-family: $primary-font;
 }
 
-.t-accent {
+.font-accent {
   font-family: $accent-font;
 }
 

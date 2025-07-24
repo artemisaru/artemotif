@@ -1,4 +1,5 @@
 @use '../themes/themes' as *;
+@use 'sass:map';
 
 // Generate CSS variables per theme
 @each $theme-name, $theme-map in $themes {
@@ -9,4 +10,32 @@
             }
         }
     }
+}
+
+@each $group, $tokens in map.get($themes, dark) {
+  @if $group == 'background' {
+    @each $name, $value in $tokens {
+      .bg-#{$name} {
+        color: var(--#{$group}-#{$name});
+      }
+    }
+  } @else if $group == 'text' {
+    @each $name, $value in $tokens {
+      .t-#{$name} {
+        color: var(--#{$group}-#{$name});
+      }
+    }
+  } @else if $group == 'fill' {
+    @each $name, $value in $tokens {
+      .fill-#{$name} {
+        color: var(--#{$group}-#{$name});
+      }
+    }
+  } @else if $group == 'separator' {
+    @each $name, $value in $tokens {
+      .sp-#{$name} {
+        color: var(--#{$group}-#{$name});
+      }
+    }
+  } 
 }

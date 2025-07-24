@@ -10,9 +10,9 @@
   --neutral-grey-6: #F2EBD5;
   --neutral-white: #FAF4E1;
   --neutral-black: #121110;
-  --background-priamry: #FAF4E1;
+  --background-primary: #FAF4E1;
   --background-secondary: #F2EBD5;
-  --background-teretiary: #FAF4E1;
+  --background-tertiary: #FAF4E1;
   --text-primary: #121110;
   --text-secondary: rgba(41, 39, 35, 0.6);
   --text-tertiary: rgba(41, 39, 35, 0.3);
@@ -36,9 +36,9 @@
   --neutral-grey-6: #1A1815;
   --neutral-black: #121110;
   --neutral-white: #FAF4E1;
-  --background-priamry: #121110;
+  --background-primary: #121110;
   --background-secondary: #1A1815;
-  --background-teretiary: #292723;
+  --background-tertiary: #292723;
   --background-primary-el: #1A1815;
   --background-secondary-el: #292723;
   --background-tertiary-el: #383631;
@@ -53,11 +53,71 @@
   --separator-transparent: rgba(51, 50, 49, 0.6);
 }
 
+.bg-primary {
+  color: var(--background-primary);
+}
+
+.bg-secondary {
+  color: var(--background-secondary);
+}
+
+.bg-tertiary {
+  color: var(--background-tertiary);
+}
+
+.bg-primary-el {
+  color: var(--background-primary-el);
+}
+
+.bg-secondary-el {
+  color: var(--background-secondary-el);
+}
+
+.bg-tertiary-el {
+  color: var(--background-tertiary-el);
+}
+
 .t-primary {
+  color: var(--text-primary);
+}
+
+.t-secondary {
+  color: var(--text-secondary);
+}
+
+.t-tertiary {
+  color: var(--text-tertiary);
+}
+
+.t-quaternary {
+  color: var(--text-quaternary);
+}
+
+.fill-primary {
+  color: var(--fill-primary);
+}
+
+.fill-secondary {
+  color: var(--fill-secondary);
+}
+
+.fill-tertiary {
+  color: var(--fill-tertiary);
+}
+
+.fill-quaternary {
+  color: var(--fill-quaternary);
+}
+
+.sp-transparent {
+  color: var(--separator-transparent);
+}
+
+.font-primary {
   font-family: "Aspekta Variable";
 }
 
-.t-accent {
+.font-accent {
   font-family: "Playfair Display";
 }
 
