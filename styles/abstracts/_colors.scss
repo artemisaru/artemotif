@@ -1,0 +1,80 @@
+@use 'variables' as *;
+
+$light-colors: (
+  accent: (
+    'primary': $brand-blue,
+    'secondary': $brand-red,
+    'gradient': $brand-gradient-1
+  ),
+  neutral: (
+    'grey': $grey,
+    'grey-2': $grey-2,
+    'grey-3': $grey-3,
+    'grey-4': $grey-4,
+    'grey-5': $grey-5,
+    'grey-6': $grey-6,
+    'white': $brand-white,
+    'black': $brand-black
+  ),
+  background: (
+    'primary': $brand-white,
+    'secondary': $grey-6,
+    'tertiary': $brand-white
+  ),
+  text: (
+    'primary': $brand-black,
+    'secondary': rgba(41, 39, 35, 0.6),
+    'tertiary': rgba(41, 39, 35, 0.3),
+    'quaternary': rgba(41, 39, 35, 0.18)
+  ),
+  fill: (
+    'primary': rgba(128, 124, 113, 0.2),
+    'secondary': rgba(128, 124, 113, 0.16),
+    'tertiary': rgba(128, 124, 113, 0.12),
+    'quaternary': rgba(128, 124, 113, 0.08)
+  ),
+  separator: (
+    'transparent': rgba(153, 145, 122, 0.3)
+  )
+);
+
+$dark-colors: (
+  accent: (
+    'primary': $brand-yellow,
+    'secondary': $brand-red,
+    'gradient': $brand-gradient-2
+    ),
+  neutral: (
+    'grey': $grey,
+    'grey-2': $grey-n2,
+    'grey-3': $grey-n3,
+    'grey-4': $grey-n4,
+    'grey-5': $grey-n5,
+    'grey-6': $grey-n6,
+    'black': $brand-black,
+    'white': $brand-white
+  ),
+  background: (
+    'primary': $brand-black,
+    'secondary': $grey-n6,
+    'tertiary': $grey-n5,
+    'primary-el': $grey-n6,
+    'secondary-el': $grey-n5,
+    'tertiary-el': $grey-n4
+  ),
+  text: (
+    'primary': $brand-white,
+    'secondary': rgba(229, 223, 202, 0.6),
+    'tertiary': rgba(229, 223, 202, 0.3),
+    'quaternary': rgba(229, 223, 202, 0.16)
+  ),
+  fill: (
+    'primary': rgba(128, 124, 113, 0.36),
+    'secondary': rgba(128, 124, 113, 0.32),
+    'tertiary': rgba(128, 124, 113, 0.24),
+    'quaternary': rgba(128, 124, 113, 0.18)
+  ),
+  separator: (
+    'transparent': rgba(51, 50, 49, 0.6)
+  )
+)

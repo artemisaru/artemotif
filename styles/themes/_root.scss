@@ -1,0 +1,9 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/effects' as *;
+@use '../abstracts/theme-utils' as *;
+
+:root {
+  @include register-color-variables($light-colors);
+  @include register-theme-variables($light-elevation, 'shadow');
+  @include register-theme-variables($blur, 'blur');
+}

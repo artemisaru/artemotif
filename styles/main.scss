@@ -1,5 +1,7 @@
 @use 'base';
 @use 'components';
 @use 'layout';
-@use 'themes';
+@use 'themes/dark';
+@use 'themes/light';
+@use 'themes/root';
 //@use 'pages';

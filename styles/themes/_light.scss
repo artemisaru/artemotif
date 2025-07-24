@@ -1,0 +1,10 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/effects' as *;
+@use '../abstracts/theme-utils' as *;
+
+@include generate-theme(
+  'theme-light',
+  $light-colors,
+  $light-elevation,
+  $blur
+);
