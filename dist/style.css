@@ -53,6 +53,14 @@
   --separator-transparent: rgba(51, 50, 49, 0.6);
 }
 
+.t-primary {
+  font-family: "Aspekta Variable";
+}
+
+.t-accent {
+  font-family: "Playfair Display";
+}
+
 @media (max-width: 767px) {
   .display-lg {
     font-size: 3.157rem;

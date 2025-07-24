@@ -2,42 +2,50 @@
 @use '../abstracts/mixins' as *;
 
 // Text Styles
+.t-primary {
+  font-family: $primary-font;
+}
+
+.t-accent {
+  font-family: $accent-font;
+}
+
 .display-lg {
-  @include responsive-font-style(h1);
+  @include responsiveFontStyle(h1);
 }
 
 .display-sm {
-  @include responsive-font-style(h2);
+  @include responsiveFontStyle(h2);
 }
 
 .headline-lg {
-  @include responsive-font-style(h3);
+  @include responsiveFontStyle(h3);
 }
 
 .headline-sm {
-  @include responsive-font-style(h4);
+  @include responsiveFontStyle(h4);
 }
 
 .subheadline-lg {
-  @include responsive-font-style(h5);
+  @include responsiveFontStyle(h5);
 }
 
 .subheadline-sm {
-  @include responsive-font-style(h6);
+  @include responsiveFontStyle(h6);
 }
 
 .body-lg {
-  @include responsive-font-style(body);
+  @include responsiveFontStyle(body);
 }
 
 .body-sm {
-  @include responsive-font-style(b-small);
+  @include responsiveFontStyle(b-small);
 }
 
 .label-lg {
-  @include responsive-font-style(t-label);
+  @include responsiveFontStyle(t-label);
 }
 
 .label-sm {
-  @include responsive-font-style(b-small);
+  @include responsiveFontStyle(b-small);
 }
