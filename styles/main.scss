@@ -1,25 +1,5 @@
-// Abstracts
-@use './abstracts/variables';
-@use './abstracts/functions';
-@use './abstracts/mixins';
-
-// Base
-@use './base/global';
-@use './base/reset';
-@use './base/typography';
-
-// Layout
-@use './layout/footer';
-@use './layout/grid';
-@use './layout/header';
-
-// Components
-@use './components/buttons';
-@use './components/cards';
-@use './components/nav';
-
-// Themes
-@use './themes/themes';
-@use './themes/light';
-
-// Pages
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'themes';
+//@use 'pages';
