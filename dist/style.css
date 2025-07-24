@@ -129,6 +129,37 @@
   color: var(--separator-transparent);
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--background-primary);
+  font-family: "Aspekta Variable";
+  color: var(--text-primary);
+}
+
 .font-primary {
   font-family: "Aspekta Variable";
 }
