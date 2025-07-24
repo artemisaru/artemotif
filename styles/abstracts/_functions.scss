@@ -1,27 +1,18 @@
 @use 'colors' as *;
 @use 'effects' as *;
+@use 'mixins' as *;
 @use 'sass:map';
 
-// Generate CSS color variables per theme
-//@each $theme, $colors-map in $colors {
-    //.theme-#{$theme} {
-        //@each $group, $tokens in $colors-map {
-          //@each $name, $value in $tokens {
-            //--#{$group}-#{$name}: #{$value};
-         // }
-       // }
-    //}
-///}
-
-// Generate CSS effcts variables per theme
-//@each $theme, $effects-map in $effects {
-//    .theme-#{$theme} {
-//        @each $group, $tokens in $effects-map {
-//          @each $name, $value in $tokens {
-//            --#{$group}-#{$name}: #{$value};
-//          }
-//        }
-//    }
-//}
-
 // Generate color classes per element
+@each $group, $tokens in $dark-colors {
+  @if $group == 'background' {
+    @include register-color-classes($tokens, 'bg', $group);
+  } @else if $group == 'text' {
+    @include register-color-classes($tokens, 't', $group);
+  } @else if $group == 'fill' {
+    @include register-color-classes($tokens, 'fill', $group);
+  } @else if $group == 'separator' {
+    @include register-color-classes($tokens, 'sep', $group);
+  } 
+}
+

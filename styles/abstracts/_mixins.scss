@@ -1,6 +1,15 @@
 @use './variables' as *;
 @use 'sass:map';
 
+// Register color classes
+@mixin register-color-classes($map, $prefix, $var-prefix) {
+  @each $name, $value in $map {
+    .#{$prefix}-#{$name} {
+      color: var(--#{$var-prefix}-#{$name})
+    }
+  }
+}
+
 // Typography Mixins
 @mixin fontStyle($element, $breakpoint: desktop) {
   @if $breakpoint == desktop {

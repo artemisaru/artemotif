@@ -1,3 +1,63 @@
+.bg-primary {
+  color: var(--background-primary);
+}
+
+.bg-secondary {
+  color: var(--background-secondary);
+}
+
+.bg-tertiary {
+  color: var(--background-tertiary);
+}
+
+.bg-primary-el {
+  color: var(--background-primary-el);
+}
+
+.bg-secondary-el {
+  color: var(--background-secondary-el);
+}
+
+.bg-tertiary-el {
+  color: var(--background-tertiary-el);
+}
+
+.t-primary {
+  color: var(--text-primary);
+}
+
+.t-secondary {
+  color: var(--text-secondary);
+}
+
+.t-tertiary {
+  color: var(--text-tertiary);
+}
+
+.t-quaternary {
+  color: var(--text-quaternary);
+}
+
+.fill-primary {
+  color: var(--fill-primary);
+}
+
+.fill-secondary {
+  color: var(--fill-secondary);
+}
+
+.fill-tertiary {
+  color: var(--fill-tertiary);
+}
+
+.fill-quaternary {
+  color: var(--fill-quaternary);
+}
+
+.sep-transparent {
+  color: var(--separator-transparent);
+}
+
 *,
 *::before,
 *::after {
