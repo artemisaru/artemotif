@@ -1,6 +1,5 @@
-@use 'colors' as *;
-@use 'effects' as *;
-@use 'mixins' as *;
+@use './mixins' as *;
+@use './variables' as *;
 @use 'sass:map';
 
 // Generate color classes per element
@@ -15,4 +14,3 @@
     @include register-color-classes($tokens, 'sep', $group);
   } 
 }
-

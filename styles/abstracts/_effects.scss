@@ -1,3 +1,6 @@
+// Variables
+
+// Themed elevation Stiles
 $light-elevation: (
   'sm': (
     0px 0px 16px -4px rgba(16, 24, 40, 0.08), 
@@ -24,6 +27,7 @@ $dark-elevation: (
   'xl': 0px 0px 64px -12px rgba(0, 0, 0, 0.08)
 );
 
+// Blur Styles
 $blur: (
   'sm': blur(4px),
   'md': blur(8px),

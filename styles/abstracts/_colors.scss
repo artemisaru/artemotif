@@ -1,28 +1,54 @@
-@use 'variables' as *;
+// Variables
 
+// Artemotif Color Palette
+$brand-primary-1: #121110;
+$brand-primary-2: #faf4e1;
+$brand-secondary-1: #ffc922;
+$brand-secondary-2: #273be2;
+$brand-tertiary: #dd3f2b;
+
+$brand-gradient-1: linear-gradient(103.04deg, $brand-tertiary 10.42%, $brand-secondary-1 100%);
+$brand-gradient-2: linear-gradient(103.04deg, $brand-tertiary 10.42%, $brand-secondary-2 100%);
+
+// Neutral Color Palette -> Specific to Artemotif
+// $neutral-0: $brand-primary-1
+$neutral-1: #1a1815;
+$neutral-2: #292723;
+$neutral-3: #383631;
+$neutral-4: #45433c;
+$neutral-5: #615e54;
+$neutral-6: #8f8a7c;
+$neutral-7: #ada899;
+$neutral-8: #c7c1af;
+$neutral-9: #d1cbb8;
+$neutral-10: #e5dfca;
+$neutral-11: #f2ebd5;
+// $neutral-12: $brand-primary-2
+
+// Themed color groups & tokens
 $light-colors: (
   accent: (
-    'primary': $brand-blue,
-    'secondary': $brand-red,
-    'gradient': $brand-gradient-1
+    'primary': $brand-secondary-2,
+    'secondary': $brand-tertiary,
+    'gradient': $brand-gradient-2
   ),
   neutral: (
-    'grey': $grey,
-    'grey-2': $grey-2,
-    'grey-3': $grey-3,
-    'grey-4': $grey-4,
-    'grey-5': $grey-5,
-    'grey-6': $grey-6,
-    'white': $brand-white,
-    'black': $brand-black
+    'grey': $neutral-6,
+    'grey-2': $neutral-7,
+    'grey-3': $neutral-8,
+    'grey-4': $neutral-9,
+    'grey-5': $neutral-10,
+    'grey-6': $neutral-11,
+    'white': $brand-primary-2,
+    'black': $brand-primary-1
   ),
   background: (
-    'primary': $brand-white,
-    'secondary': $grey-6,
-    'tertiary': $brand-white
+    'primary': $brand-primary-2,
+    'secondary': $neutral-11,
+    'tertiary': $brand-primary-2
   ),
   text: (
-    'primary': $brand-black,
+    'primary': $brand-primary-1,
     'secondary': rgba(41, 39, 35, 0.6),
     'tertiary': rgba(41, 39, 35, 0.3),
     'quaternary': rgba(41, 39, 35, 0.18)
@@ -40,33 +66,31 @@ $light-colors: (
 
 $dark-colors: (
   accent: (
-    'primary': $brand-yellow,
-    'secondary': $brand-red,
-    'gradient': $brand-gradient-2
+    'primary': $brand-secondary-1,
+    'secondary': $brand-tertiary,
+    'gradient': $brand-gradient-1
     ),
   neutral: (
-    'grey': $grey,
-    'grey-2': $grey-n2,
-    'grey-3': $grey-n3,
-    'grey-4': $grey-n4,
-    'grey-5': $grey-n5,
-    'grey-6': $grey-n6,
-    'black': $brand-black,
-    'white': $brand-white
+    'grey': $neutral-6,
+    'grey-2': $neutral-5,
+    'grey-3': $neutral-4,
+    'grey-4': $neutral-3,
+    'grey-5': $neutral-2,
+    'grey-6': $neutral-1,
+    'black': $brand-primary-1,
+    'white': $brand-primary-2
   ),
   background: (
-    'primary': $brand-black,
-    'secondary': $grey-n6,
-    'tertiary': $grey-n5,
-    'primary-el': $grey-n6,
-    'secondary-el': $grey-n5,
-    'tertiary-el': $grey-n4
+    'primary': $brand-primary-1,
+    'secondary': $neutral-1,
+    'tertiary': $neutral-2,
+    'quaternary': $neutral-3
   ),
   text: (
-    'primary': $brand-white,
-    'secondary': rgba(229, 223, 202, 0.6),
-    'tertiary': rgba(229, 223, 202, 0.3),
-    'quaternary': rgba(229, 223, 202, 0.16)
+    'primary': $brand-primary-2,
+    'secondary': rgba(230, 224, 204, 0.6),
+    'tertiary': rgba(230, 224, 204, 0.3),
+    'quaternary': rgba(230, 224, 204, 0.16)
   ),
   fill: (
     'primary': rgba(128, 124, 113, 0.36),
@@ -77,4 +101,30 @@ $dark-colors: (
   separator: (
     'transparent': rgba(51, 50, 49, 0.6)
   )
-)
+);
+
+// Mixins
+
+// Register color classes
+@mixin register-color-classes($map, $prefix, $var-prefix) {
+  @each $name, $value in $map {
+    .#{$prefix}-#{$name} {
+      color: var(--#{$var-prefix}-#{$name})
+    }
+  }
+}
+
+// Functions
+
+// Generate color classes
+@each $group, $tokens in $dark-colors {
+  @if $group == 'background' {
+    @include register-color-classes($tokens, 'bg', $group);
+  } @else if $group == 'text' {
+    @include register-color-classes($tokens, 't', $group);
+  } @else if $group == 'fill' {
+    @include register-color-classes($tokens, 'fill', $group);
+  } @else if $group == 'separator' {
+    @include register-color-classes($tokens, 'sep', $group);
+  } 
+}

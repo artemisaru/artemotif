@@ -1,0 +1,168 @@
+@use './breakpoints' as *;
+@use 'sass:map';
+// Variables
+
+// Artemotif Typefaces
+$primary-font: 'Aspekta Variable';
+$accent-font: 'Playfair Display';
+
+// Font Weights
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// Trackings
+$letter-spacings: (
+  h1: -0.25px,
+  h2: -0.2px,
+  h3: -0.2px,
+  h4: 0px,
+  h5: 0px,
+  h6: 0.2px,
+  body: 0.2px,
+  t-label: 0.3px,
+  b-small: 0.3px
+);
+
+// Desktop Typescale
+$font-sizes-desktop: (
+  'h1': 5.610rem,
+  'h2': 4.209rem,
+  'h3': 3.157rem,
+  'h4': 2.369rem,
+  'h5': 1.777rem,
+  'h6': 1.333rem,
+  'body': 1.000rem,
+  'label': 0.875rem,
+  'small': 0.750rem,
+);
+
+$line-heights-desktop: (
+  'h1': 100px,
+  'h2': 80px,
+  'h3': 60px,
+  'h4': 44px,
+  'h5': 36px,
+  'h6': 28px,
+  'body': 20px,
+  'label': 20px,
+  'small': 16px,
+);
+
+// Tablet Typescale
+$font-sizes-tablet: (
+  'h1': 4.209rem,
+  'h2': 3.157rem,
+  'h3': 2.735rem,
+  'h4': 2.052rem,
+  'h5': 1.539rem,
+  'h6': 1.155rem,
+  'body': 1.000rem,
+  'label': 0.875rem,
+  'small': 0.750rem,
+);
+
+$line-heights-tablet: (
+  'h1': 80px,
+  'h2': 60px,
+  'h3': 52px,
+  'h4': 40px,
+  'h5': 32px,
+  'h6': 24px,
+  'body': 20px,
+  'label': 20px,
+  'small': 16px,
+);
+
+// Mobile Typescale
+$font-sizes-mobile: (
+  'h1': 3.157rem,
+  'h2': 2.369rem,
+  'h3': 2.052rem,
+  'h4': 1.777rem,
+  'h5': 1.333rem,
+  'h6': 1.155rem,
+  'body': 1.000rem,
+  'label': 0.875rem,
+  'small': 0.750rem,
+);
+
+$line-heights-mobile: (
+  'h1': 60px,
+  'h2': 44px,
+  'h3': 40px,
+  'h4': 36px,
+  'h5': 28px,
+  'h6': 24px,
+  'body': 20px,
+  'label': 20px,
+  'small': 16px,
+);
+
+$text-styles: (
+  'display-lg': 'h1',
+  'display-sm': 'h2',
+  'headline-lg': 'h3',
+  'headline-sm': 'h4',
+  'subheadline-lg': 'h5',
+  'subheadline-sm': 'h6',
+  'body-lg': 'body',
+  'body-sm': 'small',
+  'label-lg': 'body',
+  'label-sm': 'small',
+);
+
+// Mixins
+
+// Register text styles
+@mixin font-style($element, $breakpoint: 'desktop') {
+  @if $breakpoint == 'desktop' {
+    font-size: map.get($font-sizes-desktop, $element);
+    line-height: map.get($line-heights-desktop, $element);
+    letter-spacing: map.get($letter-spacings, $element);
+  } @else if $breakpoint == 'tablet' {
+    font-size: map.get($font-sizes-tablet, $element);
+    line-height: map.get($line-heights-tablet, $element);
+    letter-spacing: map.get($letter-spacings, $element);
+  } @else if $breakpoint == 'mobile' {
+    font-size: map.get($font-sizes-mobile, $element);
+    line-height: map.get($line-heights-mobile, $element);
+    letter-spacing: map.get($letter-spacings, $element);
+  }
+}
+
+// Generate text styles
+@mixin responsive-font-style($map) {
+  @media (max-width: $breakpoint-mobile) {
+    @each $token, $element in $map {
+      .#{$token} {
+        font-family: $primary-font;
+        @include font-style($element, 'mobile')
+      }
+    }
+  }
+  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @each $token, $element in $map {
+      .#{$token} {
+        font-family: $primary-font;
+        @include font-style($element, 'tablet')
+      }
+    }
+  }
+  @media (min-width: $breakpoint-desktop) {
+    @each $token, $element in $map {
+      .#{$token} {
+        font-family: $primary-font;
+        @include font-style($element, 'desktop')
+      }
+    }
+  }
+}
+
+// Functions
+
+@include responsive-font-style($text-styles);
+
+

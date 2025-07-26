@@ -1,6 +1,35 @@
 @use './variables' as *;
 @use 'sass:map';
 
+// Themeing
+@mixin register-theme-variables($map, $prefix) {
+  @each $name, $value in $map {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+@mixin register-color-variables($color-map) {
+  @each $group, $tokens in $color-map {
+    @include register-theme-variables($tokens, $group);
+  }
+}
+
+@mixin generate-theme($theme-name, $color-map: null, $elevation-map: null, $blur-map: null) {
+  .#{$theme-name} {
+    // Generate color variables
+    @include register-color-variables($color-map);
+    
+    // Generate elevation variables
+    @if $elevation-map != null {
+      @include register-theme-variables($elevation-map, 'shadow');
+    }
+    // Generate blur variables
+    @if $blur-map != null {
+      @include register-theme-variables($blur-map, 'blur');
+    }
+  }
+}
+
 // Register color classes
 @mixin register-color-classes($map, $prefix, $var-prefix) {
   @each $name, $value in $map {

@@ -10,16 +10,8 @@
   color: var(--background-tertiary);
 }
 
-.bg-primary-el {
-  color: var(--background-primary-el);
-}
-
-.bg-secondary-el {
-  color: var(--background-secondary-el);
-}
-
-.bg-tertiary-el {
-  color: var(--background-tertiary-el);
+.bg-quaternary {
+  color: var(--background-quaternary);
 }
 
 .t-primary {
@@ -58,6 +50,186 @@
   color: var(--separator-transparent);
 }
 
+@media (max-width: 767px) {
+  .display-lg {
+    font-family: "Aspekta Variable";
+    font-size: 3.157rem;
+    line-height: 60px;
+    letter-spacing: -0.25px;
+  }
+  .display-sm {
+    font-family: "Aspekta Variable";
+    font-size: 2.369rem;
+    line-height: 44px;
+    letter-spacing: -0.2px;
+  }
+  .headline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 2.052rem;
+    line-height: 40px;
+    letter-spacing: -0.2px;
+  }
+  .headline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 1.777rem;
+    line-height: 36px;
+    letter-spacing: 0px;
+  }
+  .subheadline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1.333rem;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+  .subheadline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 1.155rem;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  .body-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .body-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  .label-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .label-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .display-lg {
+    font-family: "Aspekta Variable";
+    font-size: 4.209rem;
+    line-height: 80px;
+    letter-spacing: -0.25px;
+  }
+  .display-sm {
+    font-family: "Aspekta Variable";
+    font-size: 3.157rem;
+    line-height: 60px;
+    letter-spacing: -0.2px;
+  }
+  .headline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 2.735rem;
+    line-height: 52px;
+    letter-spacing: -0.2px;
+  }
+  .headline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 2.052rem;
+    line-height: 40px;
+    letter-spacing: 0px;
+  }
+  .subheadline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1.539rem;
+    line-height: 32px;
+    letter-spacing: 0px;
+  }
+  .subheadline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 1.155rem;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  .body-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .body-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  .label-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .label-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .display-lg {
+    font-family: "Aspekta Variable";
+    font-size: 5.61rem;
+    line-height: 100px;
+    letter-spacing: -0.25px;
+  }
+  .display-sm {
+    font-family: "Aspekta Variable";
+    font-size: 4.209rem;
+    line-height: 80px;
+    letter-spacing: -0.2px;
+  }
+  .headline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 3.157rem;
+    line-height: 60px;
+    letter-spacing: -0.2px;
+  }
+  .headline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 2.369rem;
+    line-height: 44px;
+    letter-spacing: 0px;
+  }
+  .subheadline-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1.777rem;
+    line-height: 36px;
+    letter-spacing: 0px;
+  }
+  .subheadline-sm {
+    font-family: "Aspekta Variable";
+    font-size: 1.333rem;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+  }
+  .body-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .body-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  .label-lg {
+    font-family: "Aspekta Variable";
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+  .label-sm {
+    font-family: "Aspekta Variable";
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+}
 *,
 *::before,
 *::after {
@@ -89,256 +261,26 @@ body {
   color: var(--text-primary);
 }
 
-.font-primary {
-  font-family: "Aspekta Variable";
-}
-
-.font-accent {
-  font-family: "Playfair Display";
-}
-
-@media (max-width: 767px) {
-  .display-lg {
-    font-size: 3.157rem;
-    line-height: 60px;
-    letter-spacing: -0.25px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .display-lg {
-    font-size: 4.209rem;
-    line-height: 80px;
-    letter-spacing: -0.25px;
-  }
-}
-@media (min-width: 1024px) {
-  .display-lg {
-    font-size: 5.61rem;
-    line-height: 100px;
-    letter-spacing: -0.25px;
-  }
-}
-
-@media (max-width: 767px) {
-  .display-sm {
-    font-size: 2.369rem;
-    line-height: 44px;
-    letter-spacing: -0.2px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .display-sm {
-    font-size: 3.157rem;
-    line-height: 60px;
-    letter-spacing: -0.2px;
-  }
-}
-@media (min-width: 1024px) {
-  .display-sm {
-    font-size: 4.209rem;
-    line-height: 80px;
-    letter-spacing: -0.2px;
-  }
-}
-
-@media (max-width: 767px) {
-  .headline-lg {
-    font-size: 2.052rem;
-    line-height: 40px;
-    letter-spacing: -0.2px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .headline-lg {
-    font-size: 2.735rem;
-    line-height: 52px;
-    letter-spacing: -0.2px;
-  }
-}
-@media (min-width: 1024px) {
-  .headline-lg {
-    font-size: 3.157rem;
-    line-height: 60px;
-    letter-spacing: -0.2px;
-  }
-}
-
-@media (max-width: 767px) {
-  .headline-sm {
-    font-size: 1.777rem;
-    line-height: 36px;
-    letter-spacing: 0px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .headline-sm {
-    font-size: 2.052rem;
-    line-height: 40px;
-    letter-spacing: 0px;
-  }
-}
-@media (min-width: 1024px) {
-  .headline-sm {
-    font-size: 2.369rem;
-    line-height: 44px;
-    letter-spacing: 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  .subheadline-lg {
-    font-size: 1.333rem;
-    line-height: 28px;
-    letter-spacing: 0px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .subheadline-lg {
-    font-size: 1.539rem;
-    line-height: 32px;
-    letter-spacing: 0px;
-  }
-}
-@media (min-width: 1024px) {
-  .subheadline-lg {
-    font-size: 1.777rem;
-    line-height: 36px;
-    letter-spacing: 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  .subheadline-sm {
-    font-size: 1.155rem;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .subheadline-sm {
-    font-size: 1.155rem;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-  }
-}
-@media (min-width: 1024px) {
-  .subheadline-sm {
-    font-size: 1.333rem;
-    line-height: 28px;
-    letter-spacing: 0.2px;
-  }
-}
-
-@media (max-width: 767px) {
-  .body-lg {
-    font-size: 1rem;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .body-lg {
-    font-size: 1rem;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-  }
-}
-@media (min-width: 1024px) {
-  .body-lg {
-    font-size: 1rem;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-  }
-}
-
-@media (max-width: 767px) {
-  .body-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .body-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 1024px) {
-  .body-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-
-@media (max-width: 767px) {
-  .label-lg {
-    font-size: 0.875rem;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .label-lg {
-    font-size: 0.875rem;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 1024px) {
-  .label-lg {
-    font-size: 0.875rem;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-  }
-}
-
-@media (max-width: 767px) {
-  .label-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .label-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-@media (min-width: 1024px) {
-  .label-sm {
-    font-size: 0.75rem;
-    line-height: 16px;
-    letter-spacing: 0.3px;
-  }
-}
-
 .theme-dark {
-  --accent-primary: #FFC922;
-  --accent-secondary: #DD3F2B;
-  --accent-gradient: linear-gradient(103.04deg, #DD3F2B 10.42%, #FFC922 100%);
-  --neutral-grey: #8F8A7C;
-  --neutral-grey-2: #615E54;
-  --neutral-grey-3: #45433C;
+  --accent-primary: #ffc922;
+  --accent-secondary: #dd3f2b;
+  --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #ffc922 100%);
+  --neutral-grey: #8f8a7c;
+  --neutral-grey-2: #615e54;
+  --neutral-grey-3: #45433c;
   --neutral-grey-4: #383631;
   --neutral-grey-5: #292723;
-  --neutral-grey-6: #1A1815;
+  --neutral-grey-6: #1a1815;
   --neutral-black: #121110;
-  --neutral-white: #FAF4E1;
+  --neutral-white: #faf4e1;
   --background-primary: #121110;
-  --background-secondary: #1A1815;
+  --background-secondary: #1a1815;
   --background-tertiary: #292723;
-  --background-primary-el: #1A1815;
-  --background-secondary-el: #292723;
-  --background-tertiary-el: #383631;
-  --text-primary: #FAF4E1;
-  --text-secondary: rgba(229, 223, 202, 0.6);
-  --text-tertiary: rgba(229, 223, 202, 0.3);
-  --text-quaternary: rgba(229, 223, 202, 0.16);
+  --background-quaternary: #383631;
+  --text-primary: #faf4e1;
+  --text-secondary: rgba(230, 224, 204, 0.6);
+  --text-tertiary: rgba(230, 224, 204, 0.3);
+  --text-quaternary: rgba(230, 224, 204, 0.16);
   --fill-primary: rgba(128, 124, 113, 0.36);
   --fill-secondary: rgba(128, 124, 113, 0.32);
   --fill-tertiary: rgba(128, 124, 113, 0.24);
@@ -355,20 +297,20 @@ body {
 }
 
 .theme-light {
-  --accent-primary: #273BE2;
-  --accent-secondary: #DD3F2B;
-  --accent-gradient: linear-gradient(103.04deg, #DD3F2B 10.42%, #273BE2 100%);
-  --neutral-grey: #8F8A7C;
-  --neutral-grey-2: #ADA899;
-  --neutral-grey-3: #C7C1AF;
-  --neutral-grey-4: #D1CBB8;
-  --neutral-grey-5: #E5DFCA;
-  --neutral-grey-6: #F2EBD5;
-  --neutral-white: #FAF4E1;
+  --accent-primary: #273be2;
+  --accent-secondary: #dd3f2b;
+  --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #273be2 100%);
+  --neutral-grey: #8f8a7c;
+  --neutral-grey-2: #ada899;
+  --neutral-grey-3: #c7c1af;
+  --neutral-grey-4: #d1cbb8;
+  --neutral-grey-5: #e5dfca;
+  --neutral-grey-6: #f2ebd5;
+  --neutral-white: #faf4e1;
   --neutral-black: #121110;
-  --background-primary: #FAF4E1;
-  --background-secondary: #F2EBD5;
-  --background-tertiary: #FAF4E1;
+  --background-primary: #faf4e1;
+  --background-secondary: #f2ebd5;
+  --background-tertiary: #faf4e1;
   --text-primary: #121110;
   --text-secondary: rgba(41, 39, 35, 0.6);
   --text-tertiary: rgba(41, 39, 35, 0.3);
@@ -389,20 +331,20 @@ body {
 }
 
 :root {
-  --accent-primary: #273BE2;
-  --accent-secondary: #DD3F2B;
-  --accent-gradient: linear-gradient(103.04deg, #DD3F2B 10.42%, #273BE2 100%);
-  --neutral-grey: #8F8A7C;
-  --neutral-grey-2: #ADA899;
-  --neutral-grey-3: #C7C1AF;
-  --neutral-grey-4: #D1CBB8;
-  --neutral-grey-5: #E5DFCA;
-  --neutral-grey-6: #F2EBD5;
-  --neutral-white: #FAF4E1;
+  --accent-primary: #273be2;
+  --accent-secondary: #dd3f2b;
+  --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #273be2 100%);
+  --neutral-grey: #8f8a7c;
+  --neutral-grey-2: #ada899;
+  --neutral-grey-3: #c7c1af;
+  --neutral-grey-4: #d1cbb8;
+  --neutral-grey-5: #e5dfca;
+  --neutral-grey-6: #f2ebd5;
+  --neutral-white: #faf4e1;
   --neutral-black: #121110;
-  --background-primary: #FAF4E1;
-  --background-secondary: #F2EBD5;
-  --background-tertiary: #FAF4E1;
+  --background-primary: #faf4e1;
+  --background-secondary: #f2ebd5;
+  --background-tertiary: #faf4e1;
   --text-primary: #121110;
   --text-secondary: rgba(41, 39, 35, 0.6);
   --text-tertiary: rgba(41, 39, 35, 0.3);

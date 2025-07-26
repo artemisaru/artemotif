@@ -1,3 +1,4 @@
+// Register theme variables
 @mixin register-theme-variables($map, $prefix) {
   @each $name, $value in $map {
     --#{$prefix}-#{$name}: #{$value};
@@ -10,6 +11,7 @@
   }
 }
 
+// Generate theme
 @mixin generate-theme($theme-name, $color-map: null, $elevation-map: null, $blur-map: null) {
   .#{$theme-name} {
     // Generate color variables

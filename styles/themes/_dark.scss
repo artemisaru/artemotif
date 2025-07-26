@@ -1,6 +1,4 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/effects' as *;
-@use '../abstracts/theme-utils' as *;
+@use '../abstracts' as *;
 
 @include generate-theme(
   'theme-dark',

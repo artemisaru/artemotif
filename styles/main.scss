@@ -1,7 +1,25 @@
-@use 'base';
-@use 'components';
-@use 'layout';
+@charset "UTF-8";
+
+// 1. Vendors
+
+// 2. Base stuff
+@use 'base/globals';
+@use 'base/reset';
+//@use 'base/typography';
+
+// 3. Layout sections
+@use 'layout/footer';
+@use 'layout/grid';
+@use 'layout/header';
+
+// 4. Components
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/nav';
+
+// 5. Pages
+
+// 6. Themes
 @use 'themes/dark';
 @use 'themes/light';
 @use 'themes/root';
-//@use 'pages';
