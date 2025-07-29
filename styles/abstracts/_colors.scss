@@ -28,9 +28,8 @@ $neutral-11: #f2ebd5;
 // Themed color groups & tokens
 $light-colors: (
   accent: (
-    'primary': $brand-primary-1,
-    'secondary': $brand-secondary-2,
-    'tertiary': $brand-tertiary,
+    'primary': $brand-secondary-2,
+    'secondary': $brand-tertiary,
     'gradient': $brand-gradient-2
   ),
   neutral: (
@@ -40,24 +39,31 @@ $light-colors: (
     'grey-4': $neutral-9,
     'grey-5': $neutral-10,
     'grey-6': $neutral-11,
-    'grey-7': $neutral-5,
-    'grey-8': $neutral-4,
-    'grey-9': $neutral-3,
-    'grey-10': $neutral-2,
-    'grey-11': $neutral-1,
     'white': $brand-primary-2,
     'black': $brand-primary-1
   ),
-  background: (
+  bg: (
     'primary': $brand-primary-2,
     'secondary': $neutral-11,
     'tertiary': $brand-primary-2
+  ),
+  inverse-bg: (
+    'primary': $brand-primary-1,
+    'secondary': $neutral-1,
+    'tertiary': $neutral-2,
+    'quaternary': $neutral-3
   ),
   text: (
     'primary': $brand-primary-1,
     'secondary': rgba(41, 39, 35, 0.6),
     'tertiary': rgba(41, 39, 35, 0.3),
     'quaternary': rgba(41, 39, 35, 0.18)
+  ),
+  inverse-text: (
+    'primary': $brand-primary-2,
+    'secondary': rgba(230, 224, 204, 0.6),
+    'tertiary': rgba(230, 224, 204, 0.3),
+    'quaternary': rgba(230, 224, 204, 0.16)
   ),
   fill: (
     'primary': rgba(128, 124, 113, 0.2),
@@ -72,9 +78,8 @@ $light-colors: (
 
 $dark-colors: (
   accent: (
-    'primary': $brand-primary-2,
-    'secondary': $brand-secondary-1,
-    'tertiary': $brand-tertiary,
+    'primary': $brand-secondary-1,
+    'secondary': $brand-tertiary,
     'gradient': $brand-gradient-1
     ),
   neutral: (
@@ -84,25 +89,31 @@ $dark-colors: (
     'grey-4': $neutral-3,
     'grey-5': $neutral-2,
     'grey-6': $neutral-1,
-    'grey-7': $neutral-7,
-    'grey-8': $neutral-8,
-    'grey-9': $neutral-9,
-    'grey-10': $neutral-10,
-    'grey-11': $neutral-11,
     'black': $brand-primary-1,
     'white': $brand-primary-2
   ),
-  background: (
+  bg: (
     'primary': $brand-primary-1,
     'secondary': $neutral-1,
     'tertiary': $neutral-2,
     'quaternary': $neutral-3
+  ),
+  inverse-bg: (
+    'primary': $brand-primary-2,
+    'secondary': $neutral-11,
+    'tertiary': $brand-primary-2
   ),
   text: (
     'primary': $brand-primary-2,
     'secondary': rgba(230, 224, 204, 0.6),
     'tertiary': rgba(230, 224, 204, 0.3),
     'quaternary': rgba(230, 224, 204, 0.16)
+  ),
+  inverse-text: (
+    'primary': $brand-primary-1,
+    'secondary': rgba(41, 39, 35, 0.6),
+    'tertiary': rgba(41, 39, 35, 0.3),
+    'quaternary': rgba(41, 39, 35, 0.18)
   ),
   fill: (
     'primary': rgba(128, 124, 113, 0.36),
