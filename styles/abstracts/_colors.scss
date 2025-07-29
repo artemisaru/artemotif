@@ -28,8 +28,9 @@ $neutral-11: #f2ebd5;
 // Themed color groups & tokens
 $light-colors: (
   accent: (
-    'primary': $brand-secondary-2,
-    'secondary': $brand-tertiary,
+    'primary': $brand-primary-1,
+    'secondary': $brand-secondary-2,
+    'tertiary': $brand-tertiary,
     'gradient': $brand-gradient-2
   ),
   neutral: (
@@ -71,8 +72,9 @@ $light-colors: (
 
 $dark-colors: (
   accent: (
-    'primary': $brand-secondary-1,
-    'secondary': $brand-tertiary,
+    'primary': $brand-primary-2,
+    'secondary': $brand-secondary-1,
+    'tertiary': $brand-tertiary,
     'gradient': $brand-gradient-1
     ),
   neutral: (

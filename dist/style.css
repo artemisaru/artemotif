@@ -262,8 +262,9 @@ body {
 }
 
 .theme-dark {
-  --accent-primary: #ffc922;
-  --accent-secondary: #dd3f2b;
+  --accent-primary: #faf4e1;
+  --accent-secondary: #ffc922;
+  --accent-tertiary: #dd3f2b;
   --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #ffc922 100%);
   --neutral-grey: #8f8a7c;
   --neutral-grey-2: #615e54;
@@ -302,8 +303,9 @@ body {
 }
 
 .theme-light {
-  --accent-primary: #273be2;
-  --accent-secondary: #dd3f2b;
+  --accent-primary: #121110;
+  --accent-secondary: #273be2;
+  --accent-tertiary: #dd3f2b;
   --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #273be2 100%);
   --neutral-grey: #8f8a7c;
   --neutral-grey-2: #ada899;
@@ -341,8 +343,9 @@ body {
 }
 
 :root {
-  --accent-primary: #273be2;
-  --accent-secondary: #dd3f2b;
+  --accent-primary: #121110;
+  --accent-secondary: #273be2;
+  --accent-tertiary: #dd3f2b;
   --accent-gradient: linear-gradient(103.04deg, #dd3f2b 10.42%, #273be2 100%);
   --neutral-grey: #8f8a7c;
   --neutral-grey-2: #ada899;
