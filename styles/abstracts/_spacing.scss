@@ -17,5 +17,5 @@ $spacing-scale: (
 
 // Functions
 @function spacing($key) {
-  @return map-get($spacing-scale, $key);
+  @return map.get($spacing-scale, $key);
 }

@@ -245,6 +245,38 @@ body {
   color: var(--text-primary);
 }
 
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 2rem 0.75rem;
+  border-radius: radius("full");
+}
+
+.btn--fill {
+  background: var(--inverse-bg-primary);
+  color: var(--inverse-text-primary);
+}
+
+.btn--outline {
+  border: 2px solid var(--inverse-bg-primary);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn--tonal {
+  background: var(--neutral-grey-5);
+  color: var(--accent-primary);
+}
+
 .theme-dark {
   --accent-primary: #ffc922;
   --accent-secondary: #dd3f2b;

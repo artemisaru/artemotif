@@ -1,1 +1,36 @@
 @use '../abstracts/' as *;
+
+// Base
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+
+  padding: spacing('md') spacing('2xs');
+  border-radius: radius('full');
+}
+
+// Styles
+.btn--fill {
+  background: var(--inverse-bg-primary);
+  color: var(--inverse-text-primary);
+}
+
+.btn--outline {
+  border: 2px solid var(--inverse-bg-primary);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn--tonal {
+  background: var(--neutral-grey-5);
+  color: var(--accent-primary);
+}
