@@ -240,7 +240,7 @@ html {
 
 body {
   min-height: 100%;
-  background-color: var(--background-primary);
+  background-color: var(--bg-primary);
   font-family: "Aspekta Variable";
   color: var(--text-primary);
 }
