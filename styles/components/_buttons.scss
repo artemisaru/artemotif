@@ -10,8 +10,13 @@
   text-decoration: none;
   border: none;
 
+  gap: 8px;
   padding: spacing('2xs') spacing('md');
   border-radius: radius('full');
+}
+
+.icon-btn {
+  padding: 0.375rem 1.25rem;
 }
 
 // Styles

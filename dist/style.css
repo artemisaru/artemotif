@@ -250,8 +250,13 @@ body {
   white-space: nowrap;
   text-decoration: none;
   border: none;
+  gap: 8px;
   padding: 0.75rem 2rem;
   border-radius: 1000px;
+}
+
+.icon-btn {
+  padding: 0.375rem 1.25rem;
 }
 
 .btn--fill {
@@ -281,6 +286,12 @@ body {
   right: 1.5rem;
   padding: 10px;
   box-shadow: var(--shadow-xl);
+}
+
+.kit-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .theme-dark {
