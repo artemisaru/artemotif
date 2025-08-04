@@ -1,0 +1,27 @@
+{
+  "name": "artemotif",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artemisaru/artemotif.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/artemisaru/artemotif/issues"
+  },
+  "homepage": "https://github.com/artemisaru/artemotif#readme",
+  "devDependencies": {
+    "vite": "^7.0.6",
+    "vite-plugin-svg-sprite": "^0.6.3"
+  }
+}
