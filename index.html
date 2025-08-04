@@ -1,64 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artemisa Ruci</title>
-    <link rel="stylesheet" href="./old-style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Library</title>
+  <link rel="stylesheet" href="./dist/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <style>
+    @font-face {
+      font-family: "Aspekta Variable";
+      font-weight: 100 900;
+      font-display: swap;
+      font-style: normal;
+      src: url("./font/AspektaVF.woff2") format("woff2");
+    }
+  </style>
 </head>
-<body>
-    <div class="noise"></div>
-    <div class="bg-container">
-        <div class="scroller-wrapper">
-            <div class="scroller" data-speed="slow">
-                <div class="scroller-inner">
-                    <p style="opacity: 1;">For the CREATIVE & the CURIOUS.</p>
-                    <p style="opacity: 0.9;">You can't use up creativity.</p>
-                    <p style="opacity: 0.8;">The more you use, the more you have.</p>
-                    <p style="opacity: 0.7;">Creativity is allowing oneself to make mistakes.</p>
-                    <p style="opacity: 0.6;">Art is knowing which ones to keep.</p>
-                    <p style="opacity: 0.5;">Creating is a meeting with yourself.</p>
-                    <p style="opacity: 0.3;">The ability to see order in chaos.</p>
-                    <p style="opacity: 0.3;">You can't use up creativity.</p>
-                    <p style="opacity: 0.3;">The more you use, the more you have.</p>
-                    <p style="opacity: 0.2;">The ability to see order in chaos.</p>
-                    <p style="opacity: 0.2;">AND BREATHE.</p>
-                </div>
-            </div>
-            <div class="scroller" data-direction="right" data-speed="slow">
-                <div class="scroller-inner">
-                    <p style="opacity: 0.2;">For the Creative & the curious.</p>
-                    <p style="opacity: 0.2;">Good design is as little design as possible.</p>
-                    <p style="opacity: 0.3;">You can't use up creativity.</p>
-                    <p style="opacity: 0.3;">The more you use, the more you have.</p>
-                    <p style="opacity: 0.5;">Creativity is allowing oneself to make mistakes.</p>
-                    <p style="opacity: 0.6;">Art is knowing which ones to keep.</p>
-                    <p style="opacity: 0.7;">You can't use up creativity.</p>
-                    <p style="opacity: 0.8;">The more you use, the more you have.</p>
-                    <p style="opacity: 0.9;">Creating is a meeting with yourself.</p>
-                    <p style="opacity: 1;">The ability to see order in chaos.</p>
-                    <p style="opacity: 1;">AND BREATHE.</p>
-                </div>
-            </div>
-        </div>
+<body class="theme-light">
+  <button class="btn btn--fill kit-fab" id="themeToggle">
+    <svg class="icon icon--lg" fill="currentColor">
+      <use href="#icon-sun"></use>
+    </svg>
+  </button>
+  <!-- Style -->
+  <div>
+    <!-- Typography -->
+    <div>
+      <p class="label-lg t-secondary kit-label">Desktop</p>
+      <h1 class="display-lg">Display Large</h1>
+      <h2 class="display-sm">Display Small</h2>
+      <h3 class="headline-lg">Headline Large</h3>
+      <h4 class="headline-sm">Headline Small</h4>
+      <h5 class="subheadline-lg">Subheadline Large</h5>
+      <h6 class="subheadline-sm">Subheadline Small</h6>
+      <p class="body-lg">Body Large</p>
+      <p class="body-sm">Body Small</p>
+      <p class="label-lg">Label Large</p>
+      <p class="label-sm">Label Small</p>
     </div>
-    <div class="container">
-        <div class="logo">
-            <svg id="eye" width="216" height="128" viewBox="0 0 216 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.25 108.23C125.989 108.23 140.37 93.8494 140.37 76.11C140.37 58.3706 125.989 43.99 108.25 43.99C90.5106 43.99 76.13 58.3706 76.13 76.11C76.13 93.8494 90.5106 108.23 108.25 108.23Z" fill="#FAF4E1"/>
-                <path id="eyelid" d="M215.62 75.79C202.839 59.5358 186.534 46.3957 167.934 37.3604C149.335 28.3251 128.928 23.6305 108.25 23.6305C87.5724 23.6305 67.1647 28.3251 48.5656 37.3604C29.9665 46.3957 13.6615 59.5358 0.880005 75.79L0.630005 76.11L0.880005 76.44C7.72713 85.1306 15.5973 92.9638 24.32 99.77L25.06 100.35C25.06 100.35 34.31 24.67 108.26 24.67C182 24.67 191.44 100.3 191.45 100.34L192.19 99.76C200.907 92.9545 208.774 85.1249 215.62 76.44L215.87 76.11L215.62 75.79Z" fill="#FAF4E1"/>
-                <path d="M176.27 15.67C180.456 15.67 183.85 12.2763 183.85 8.09001C183.85 3.90369 180.456 0.51001 176.27 0.51001C172.084 0.51001 168.69 3.90369 168.69 8.09001C168.69 12.2763 172.084 15.67 176.27 15.67Z" fill="#D6A334"/>
+    <!-- Colors -->
+    <div></div>
+    <!-- Effects -->
+    <div></div>
+  </div>
+  <!-- Components -->
+  <div>
+    <!-- Buttons -->
+    <div>
+      <div class="kit-header">
+        <h2 class="display-sm">Buttons</h2>
+        <h6 class="subheadline-sm t-secondary">4 styles, 4 states inspired by <a href="#">Google Design</a>, following <a href="#">Material Design Guidelines</a>.</h6>
+      </div>
+      <!-- Main Buttons -->
+      <div>
+        <p class="label-lg t-secondary kit-label">Main Buttons</p>
+        <!-- No Icon -->
+        <div>
+          <button class="btn btn--fill">
+            <span class="body-lg">Fill Button</span>
+          </button>
+          <button class="btn btn--outline">
+            <span class="body-lg">Outline Button</span>
+          </button>
+          <button class="btn btn--ghost">
+            <span class="body-lg">Ghost Button</span>
+          </button>
+          <button class="btn btn--tonal">
+            <span class="body-lg">Tonal Button</span>
+          </button>
+        </div>
+        <!-- With Icon -->
+        <div>
+          <button class="btn btn--fill">
+            <span class="body-lg">Fill Button</span>
+            <svg class="icon icon--sm">
+              <use href="#icon-arrow-up-right"></use>
             </svg>
-            <h1>Artemisa Ruci</h1>
-            <p>Portfolio</p>
+          </button>
+          <button class="btn btn--outline">
+            <span class="body-lg">Outline Button</span>
+            <svg class="icon icon--sm">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </button>
+          <button class="btn btn--ghost">
+            <span class="body-lg">Ghost Button</span>
+            <svg class="icon icon--sm">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </button>
+          <button class="btn btn--tonal">
+            <span class="body-lg">Tonal Button</span>
+            <svg class="icon icon--sm">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </button>
         </div>
-        <p class="message">Coming soon...hopefully</p>
-        <div class="contact">
-            <a href="https://www.figma.com/proto/l8U4jSvi14LHAMxlZClsJX/Portfolio-Presentation?page-id=0%3A1&node-id=1-98250&p=f&viewport=684%2C491%2C0.04&t=KDkQu3jd5kRSAbpE-1&scaling=contain&content-scaling=fixed">Portfolio</a>
-            <a href="https://www.linkedin.com/in/artemisa-ru%C3%A7i/">LinkedIn</a>
-        </div>
+      </div>
+      
+      <!-- Icon Buttons -->
+      <div>
+        <button class="btn icon-btn btn--fill">
+          <svg class="icon icon--lg">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
+        </button>
+        <button class="btn icon-btn btn--outline">
+          <svg class="icon icon--lg">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
+        </button>
+        <button class="btn icon-btn btn--ghost">
+          <svg class="icon icon--lg">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
+        </button>
+        <button class="btn icon-btn btn--tonal">
+          <svg class="icon icon--lg">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Links -->
+      <div></div>
     </div>
+  </div>
 
-    <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

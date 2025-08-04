@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+// Variables
+$icon-sizes: (
+  'sm': 1.125rem,
+  'md': 1.25rem,
+  'lg': 1.5rem,
+  'xl': 2rem
+);
+
+// Mixins
+@mixin icon($size: 'lg') {
+  $value: map.get($icon-sizes, $size);
+  width: $value;
+  height: $value;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+// Utility classes
+@each $name, $value in $icon-sizes {
+  .icon--#{$name} {
+    @include icon($name);
+  }
+}

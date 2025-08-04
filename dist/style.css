@@ -34,6 +34,38 @@
   color: var(--separator-transparent);
 }
 
+.icon--sm {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.icon--md {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.icon--lg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.icon--xl {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
 @media (max-width: 767px) {
   .display-lg {
     font-family: "Aspekta Variable";
