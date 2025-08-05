@@ -1,5 +1,8 @@
+import initCustomCursor from './customCursor.js';
+initCustomCursor();
+
 // Svg sprite
-import.meta.glob('./assets/icons/*.svg', { eager: true });
+import.meta.glob('../assets/icons/*.svg', { eager: true });
 
 const toggleButton = document.getElementById('themeToggle');
 

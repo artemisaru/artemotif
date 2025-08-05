@@ -243,6 +243,26 @@
     line-height: 16px;
   }
 }
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cursor-size, 24px);
+  height: var(--cursor-size, 24px);
+  border-radius: 50%;
+  background: var(--inverse-bg-primary);
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: normal;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform, background-color, opacity, width, height;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    transition: none !important;
+  }
+}
 *,
 *::before,
 *::after {
