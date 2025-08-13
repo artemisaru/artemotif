@@ -247,15 +247,21 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: var(--cursor-size, 24px);
-  height: var(--cursor-size, 24px);
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 1000px;
   background: var(--inverse-bg-primary);
   pointer-events: none;
-  z-index: 10000;
+  z-index: 8888;
   mix-blend-mode: normal;
-  transform: translate3d(-50%, -50%, 0);
-  will-change: transform, background-color, opacity, width, height;
+  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(var(--cursor-scale, 1));
+  will-change: transform, background-color, width, height;
+}
+.custom-cursor.active {
+  transition: transform 0.25s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-out 0.1s;
+}
+.custom-cursor.leaving {
+  transition: transform 0.5s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-out, height 0.2s ease-out, background-color 0.15s ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

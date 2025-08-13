@@ -5,15 +5,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: var(--cursor-size, 24px);
-  height: var(--cursor-size, 24px);
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: radius('full');
   background: var(--inverse-bg-primary);
   pointer-events: none;
-  z-index: 10000;
+  z-index: 8888;
   mix-blend-mode: normal;
-  transform: translate3d(-50%, -50%, 0);
-  will-change: transform, background-color, opacity, width, height;
+  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(var(--cursor-scale, 1));
+  will-change: transform, background-color, width, height;
+
+  &.active {
+    transition: transform .25s cubic-bezier(0, .1, .1, 1), width .1s ease-in-out, height .2s ease-in-out, background-color .2s ease-out .1s;
+  }
+
+  &.leaving {
+    transition: transform .5s cubic-bezier(0, .1, .1, 1), width .1s ease-out, height .2s ease-out, background-color .15s ease-out;
+  }
 }
 
 // Respect reduce motion
