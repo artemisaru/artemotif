@@ -12,11 +12,12 @@ export default function initCustomCursor() {
 
   const CURSOR_SIZES = {
     default: { w: 24, h: 24 },
-    link_hover: { w: 24, h: 24 },
+    link_hover: { w: 26, h: 26 },
   }
 
   // DOM refs
   const cursor = document.querySelector('.custom-cursor');
+  const cursorTargets = document.querySelectorAll('.cursor-target');
   const buttons = document.querySelectorAll('.btn--cursor');
 
   // State variables
@@ -124,6 +125,19 @@ export default function initCustomCursor() {
 
   // Event listeners
   document.addEventListener('mousemove', trackMouse);
+
+  cursorTargets.forEach(cursorTarget => {
+    cursorTarget.addEventListener('mouseenter', () => {
+      pushHover(cursorTarget, {
+        target: cursorTarget,
+        size: CURSOR_SIZES.link_hover
+      })
+    });
+
+    cursorTarget.addEventListener('mouseleave', () => {
+      popHover(cursorTarget);
+    });
+  });
 
   buttons.forEach(btn => {
     btn.addEventListener('mouseenter', () => {
