@@ -13,7 +13,7 @@ export default function initCustomCursor() {
 
   const CURSOR_SIZES = {
     default: { w: 24, h: 24 },
-    link_hover: { w: 26, h: 26 },
+    link_hover: { w: 38, h: 38 },
   }
 
   // DOM refs
@@ -27,19 +27,10 @@ export default function initCustomCursor() {
   let width = CURSOR_SIZES.default.w;
   let height = CURSOR_SIZES.default.h;
   let target = null;
-  let targetRect = null;
+  let targetRect = null; //
   let rafId = null;
-  let hoverStack = [];
+  //let hoverStack = [];
   let snapToTarget = false;
-
-  // Track mouse
-  function trackMouse(e) {
-    if (!snapToTarget) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      updateCursorStyle();
-    }
-  }
 
   // Move custom cursor
   function updateCursorStyle() {
@@ -49,66 +40,54 @@ export default function initCustomCursor() {
     cursor.style.height = `${height}px`;
   }
 
-  // Target bounds tracking
+  // Track mouse when not snapping
+  function trackMouse(e) {
+    if (!snapToTarget) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      updateCursorStyle();
+    }
+  }
+
+  // Keep cursor aligned to target if snapping/matching size
   function trackTargetBounds() {
     if (target) {
       const rect = target.getBoundingClientRect();
-      // If matchTargetSize is enabled
-      if (hoverStack.length > 0 && hoverStack[hoverStack.length - 1].opts.matchTargetSize) {
+      
+      if (target.dataset.matchSize === 'true') {
         width = rect.width;
         height = rect.height;
       }
-      // If snapToCenter is enabled
-      if (hoverStack.length > 0 && hoverStack[hoverStack.length - 1].opts.snapToCenter) {
+      
+      if (snapToTarget) {
         mouseX = rect.left + rect.width / 2;
         mouseY = rect.top + rect.height / 2;
       }
 
-      updateCursorStyle();
       targetRect = rect;
+      updateCursorStyle();
     }
     rafId = requestAnimationFrame(trackTargetBounds);
   }
 
-  // Push hover targets into stack
-  function pushHover(e, opts = {}) {
-    hoverStack.push({ e, opts });
-    applyHoverState(opts);
-  }
-
-  // Remove hover targets from stack
-  function popHover(e) {
-    hoverStack = hoverStack.filter(item => item.e !== e);
-    if (hoverStack.length > 0) {
-      applyHoverState(hoverStack[hoverStack.length - 1].opts);
-    } else {
-      resetCursor();
-    }
-  }
-
   // Apply hover state
-  function applyHoverState(opts) {
-    target = opts.target || null;
+  function applyHoverState(e, { matchSize = false, snap = false } = {}) {
+    target = e;
+    target.dataset.matchSize = matchSize;
+    snapToTarget = snap;
 
-    if (opts.matchTargetSize && target) {
-      const rect = target.getBoundingClientRect();
-      width = rect.width;
-      height = rect.height;
-    } else {
-      width = opts.size?.w || CURSOR_SIZES.link_hover.w;
-      height = opts.size?.h || CURSOR_SIZES.link_hover.h;
+    if (!matchSize) {
+      width = CURSOR_SIZES.link_hover.w;
+      height = CURSOR_SIZES.link_hover.h;
     }
-
-    snapToTarget = !!opts.snapToCenter;
 
     cursor.classList.add(CURSOR_CLASSES.active);
-    updateCursorStyle();
     trackTargetBounds();
   }
 
   // Reset cursor to default
   function resetCursor() {
-    targetRect = null;
+    target = null;
     cancelAnimationFrame(rafId);
 
     snapToTarget = false;
@@ -128,30 +107,14 @@ export default function initCustomCursor() {
   document.addEventListener('mousemove', trackMouse);
 
   cursorTargets.forEach(cursorTarget => {
-    cursorTarget.addEventListener('mouseenter', () => {
-      pushHover(cursorTarget, {
-        target: cursorTarget,
-        size: CURSOR_SIZES.link_hover
-      })
-    });
-
-    cursorTarget.addEventListener('mouseleave', () => {
-      popHover(cursorTarget);
-    });
+    cursorTarget.addEventListener('mouseenter', () => applyHoverState(cursorTarget));
+    cursorTarget.addEventListener('mouseleave', resetCursor);
   });
 
   buttons.forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-      pushHover(btn, {
-        target: btn,
-        matchTargetSize: true,
-        snapToCenter: true
-      })
-    });
+    btn.addEventListener('mouseenter', () => applyHoverState(btn, { matchSize: true, snap: true }));
     btn.addEventListener('mousedown', () => cursor.classList.add(CURSOR_CLASSES.isPressed));
     btn.addEventListener('mouseup', () => cursor.classList.remove(CURSOR_CLASSES.isPressed));
-    btn.addEventListener('mouseleave', () => {
-      popHover(btn);
-    });
+    btn.addEventListener('mouseleave', resetCursor);
   });
 }
