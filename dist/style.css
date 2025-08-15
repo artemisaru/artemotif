@@ -250,10 +250,10 @@
   width: 24px;
   height: 24px;
   border-radius: 1000px;
-  background: var(--inverse-bg-primary);
+  background: #fbf4e0;
   pointer-events: none;
   z-index: 8888;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
   transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(var(--cursor-scale, 1));
   will-change: transform, background-color, width, height;
 }
