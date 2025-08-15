@@ -7,6 +7,7 @@ export default function initCustomCursor() {
   // CONFIG
   const CURSOR_CLASSES = {
     active: 'active',
+    isPressed: 'is-pressed',
     leaving: 'leaving',
   }
 
@@ -147,7 +148,8 @@ export default function initCustomCursor() {
         snapToCenter: true
       })
     });
-
+    btn.addEventListener('mousedown', () => cursor.classList.add(CURSOR_CLASSES.isPressed));
+    btn.addEventListener('mouseup', () => cursor.classList.remove(CURSOR_CLASSES.isPressed));
     btn.addEventListener('mouseleave', () => {
       popHover(btn);
     });
