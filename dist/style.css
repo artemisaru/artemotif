@@ -313,7 +313,7 @@ body {
   gap: 0.5rem;
   padding: 0.75rem 2rem;
   border-radius: 1000px;
-  transition: transform 0.6s cubic-bezier(0.05, 0.2, 0.1, 1);
+  transition: transform 0.25s cubic-bezier(0, 0.1, 0.1, 1);
 }
 .btn > * {
   z-index: 1;
@@ -327,6 +327,11 @@ body {
 }
 .btn--filled .fill {
   background: var(--accent-primary);
+}
+.btn--filled.is-hovered {
+  background: var(--accent-primary);
+  color: var(--inverse-text-primary);
+  filter: invert(1);
 }
 .btn--filled:disabled, .btn--filled.is-disabled {
   background: var(--fill-tertiary);
@@ -342,6 +347,11 @@ body {
 .btn--outline .fill {
   background: var(--inverse-bg-primary);
 }
+.btn--outline.is-hovered {
+  border: none;
+  color: var(--inverse-text-primary);
+  filter: invert(1);
+}
 .btn--outline:disabled, .btn--outline.is-disabled {
   box-shadow: inset 0 0 0 2px var(--fill-tertiary);
   background: transparent;
@@ -356,6 +366,10 @@ body {
 .btn--ghost .fill {
   background: var(--inverse-bg-primary);
 }
+.btn--ghost.is-hovered {
+  color: var(--inverse-text-primary);
+  filter: invert(1);
+}
 .btn--ghost:disabled, .btn--ghost.is-disabled {
   background: transparent;
   color: var(--text-tertiary);
@@ -368,6 +382,11 @@ body {
 }
 .btn--tonal .fill {
   background: var(--accent-primary);
+}
+.btn--tonal.is-hovered {
+  background: var(--accent-primary);
+  color: var(--inverse-text-primary);
+  filter: invert(1);
 }
 .btn--tonal:disabled, .btn--tonal.is-disabled {
   background: var(--fill-tertiary);
@@ -400,6 +419,9 @@ body {
 }
 .btn.btn--fill:hover .fill, .btn--fill:hover .fill {
   transform: translate3d(0, 0, 0);
+}
+.btn.btn--fill:hover, .btn--fill:hover {
+  color: var(--inverse-text-primary);
 }
 
 .kit-fab {

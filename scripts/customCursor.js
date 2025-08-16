@@ -75,6 +75,7 @@ export default function initCustomCursor() {
     target = e;
     target.dataset.matchSize = matchSize;
     snapToTarget = snap;
+    target.classList.add('is-hovered');
 
     if (!matchSize) {
       width = CURSOR_SIZES.link_hover.w;
@@ -87,6 +88,7 @@ export default function initCustomCursor() {
 
   // Reset cursor to default
   function resetCursor() {
+    target.classList.remove('is-hovered');
     target = null;
     cancelAnimationFrame(rafId);
 
@@ -98,7 +100,7 @@ export default function initCustomCursor() {
       CURSOR_CLASSES.active
     );
     cursor.classList.add(CURSOR_CLASSES.leaving);
-    setTimeout(() => cursor.classList.remove(CURSOR_CLASSES.leaving), 500);
+    setTimeout(() => cursor.classList.remove(CURSOR_CLASSES.leaving), 200);
 
     updateCursorStyle();
   }
