@@ -116,7 +116,7 @@ export default function initCustomCursor() {
   buttons.forEach(btn => {
     btn.addEventListener('mouseenter', () => applyHoverState(btn, { matchSize: true, snap: true }));
     btn.addEventListener('mousedown', () => cursor.classList.add(CURSOR_CLASSES.isPressed));
-    btn.addEventListener('mouseup', () => cursor.classList.remove(CURSOR_CLASSES.isPressed));
+    btn.addEventListener('mouseup', () => setTimeout(() => cursor.classList.remove(CURSOR_CLASSES.isPressed), 400));
     btn.addEventListener('mouseleave', resetCursor);
   });
 }

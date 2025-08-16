@@ -254,14 +254,17 @@
   pointer-events: none;
   z-index: 8888;
   mix-blend-mode: difference;
-  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(var(--cursor-scale, 1));
-  will-change: transform, background-color, width, height;
+  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(1);
+  will-change: transform, width, height, opacity;
 }
 .custom-cursor.active {
-  transition: transform 0.25s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-out 0.1s;
+  transition: transform 0.25s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-out 0.1s;
+}
+.custom-cursor.is-pressed {
+  transition: transform 0.25s cubic-bezier(0, 0.1, 0.1, 1);
 }
 .custom-cursor.leaving {
-  transition: transform 0.5s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-out, height 0.2s ease-out, background-color 0.15s ease-out;
+  transition: transform 0.5s cubic-bezier(0, 0.1, 0.1, 1), width 0.1s ease-out, height 0.2s ease-out, opacity 0.15s ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

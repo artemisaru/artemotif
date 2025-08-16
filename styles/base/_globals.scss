@@ -12,15 +12,20 @@
   pointer-events: none;
   z-index: 8888;
   mix-blend-mode: difference;
-  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(var(--cursor-scale, 1));
-  will-change: transform, background-color, width, height;
+  transform: translate3d(var(--cursor-x, -50%), var(--cursor-y, -50%), 0) scale(1);
+  will-change: transform, width, height, opacity;
+  //transition: transform .25s cubic-bezier(0, .1, .1, 1);
 
   &.active {
-    transition: transform .25s cubic-bezier(0, .1, .1, 1), width .1s ease-in-out, height .2s ease-in-out, background-color .2s ease-out .1s;
+    transition: transform .25s cubic-bezier(0, .1, .1, 1), width .1s ease-in-out, height .2s ease-in-out, opacity .2s ease-out .1s;
+  }
+
+  &.is-pressed {
+    transition: transform .25s cubic-bezier(0, .1, .1, 1);
   }
 
   &.leaving {
-    transition: transform .5s cubic-bezier(0, .1, .1, 1), width .1s ease-out, height .2s ease-out, background-color .15s ease-out;
+    transition: transform .5s cubic-bezier(0, .1, .1, 1), width .1s ease-out, height .2s ease-out, opacity .15s ease-out;
   }
 }
 
