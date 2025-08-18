@@ -4,4 +4,5 @@
   @include register-color-variables($light-colors);
   @include register-theme-variables($light-elevation, 'shadow');
   @include register-theme-variables($blur, 'blur');
+  @include spacing-vars();
 }

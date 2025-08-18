@@ -2,18 +2,52 @@
 
 // Variables
 $spacing-scale: (
-  '4xs': 0.25rem,
-  '3xs': 0.5rem,
-  '2xs': 0.75rem,
-  'xs': 1rem,
-  'sm': 1.5rem,
-  'md': 2rem,
-  'lg': 2.5rem,
-  'xl': 3rem,
-  '2xl': 4rem,
-  '3xl': 6rem,
-  '4xl': 8rem,
+  '4xs': 0.25rem, // 4px
+  '3xs': 0.5rem,  // 8px
+  '2xs': 0.75rem, // 12px
+  'xs': 1rem,     // 16px
+  'sm': 1.25rem,  // 20px
+  'md': 1.5rem,   // 24px
+  'lg': 2rem,     // 32px
+  'xl': 2.5rem,   // 40px
+  '2xl': 3rem,    // 48px
+  '3xl': 4rem,    // 64px
+  '4xl': 6.25rem, // 100px
 );
+
+// Mixins
+@mixin spacing-utils() {
+  @each $key, $val in $spacing-scale {
+    // Margin
+    .m-#{$key} { margin: $val; }
+    .mt-#{$key} { margin-top: $val; }
+    .mr-#{$key} { margin-right: $val; }
+    .mb-#{$key} { margin-bottom: $val; }
+    .ml-#{$key} { margin-left: $val; }
+    .mx-#{$key} { margin-inline: $val; }
+    .my-#{$key} { margin-block: $val; }
+
+    // Padding
+    .p-#{$key} { padding: $val; }
+    .pt-#{$key} { padding-top: $val; }
+    .pr-#{$key} { padding-right: $val; }
+    .pb-#{$key} { padding-bottom: $val; }
+    .pl-#{$key} { padding-left: $val; }
+    .px-#{$key} { padding-inline: $val; }
+    .py-#{$key} { padding-block: $val; }
+
+    // Gap
+    .gap-#{$key} { gap: $val; }
+  }
+}
+
+@include spacing-utils();
+
+@mixin spacing-vars() {
+  @each $key, $val in $spacing-scale {
+    --space-#{$key}: #{$val};
+  }
+}
 
 // Functions
 @function spacing($key) {
