@@ -2,6 +2,7 @@
 
 // Variables
 $spacing-scale: (
+  '0': 0px,
   '4xs': 0.25rem, // 4px
   '3xs': 0.5rem,  // 8px
   '2xs': 0.75rem, // 12px
@@ -16,38 +17,54 @@ $spacing-scale: (
 );
 
 // Mixins
-@mixin spacing-utils() {
-  @each $key, $val in $spacing-scale {
-    // Margin
-    .m-#{$key} { margin: $val; }
-    .mt-#{$key} { margin-top: $val; }
-    .mr-#{$key} { margin-right: $val; }
-    .mb-#{$key} { margin-bottom: $val; }
-    .ml-#{$key} { margin-left: $val; }
-    .mx-#{$key} { margin-inline: $val; }
-    .my-#{$key} { margin-block: $val; }
-
-    // Padding
-    .p-#{$key} { padding: $val; }
-    .pt-#{$key} { padding-top: $val; }
-    .pr-#{$key} { padding-right: $val; }
-    .pb-#{$key} { padding-bottom: $val; }
-    .pl-#{$key} { padding-left: $val; }
-    .px-#{$key} { padding-inline: $val; }
-    .py-#{$key} { padding-block: $val; }
-
-    // Gap
-    .gap-#{$key} { gap: $val; }
-  }
-}
-
-@include spacing-utils();
-
 @mixin spacing-vars() {
   @each $key, $val in $spacing-scale {
     --space-#{$key}: #{$val};
   }
 }
+
+// Spacing
+@each $name, $value in $spacing-scale {
+  // Margin
+  .m-#{$name} { margin: $value; }
+  .mt-#{$name} { margin-top: $value; }
+  .mr-#{$name} { margin-right: $value; }
+  .mb-#{$name} { margin-bottom: $value; }
+  .ml-#{$name} { margin-left: $value; }
+  .mx-#{$name} { margin-inline: $value; }
+  .my-#{$name} { margin-block: $value; }
+
+  // Padding
+  .p-#{$name} { padding: $value; }
+  .pt-#{$name} { padding-top: $value; }
+  .pr-#{$name} { padding-right: $value; }
+  .pb-#{$name} { padding-bottom: $value; }
+  .pl-#{$name} { padding-left: $value; }
+  .px-#{$name} { padding-inline: $value; }
+  .py-#{$name} { padding-block: $value; }
+
+  // Gaps
+  .gap-#{$name} {
+    --row-gap: var(--space-#{$name});
+    --column-gap: var(--space-#{$name});
+    gap: var(--row-gap) var(--column-gap);
+  }
+
+  .gap-x-#{$name} {
+    --column-gap: var(--space-#{$name});
+    gap: var(--column-gap);
+  }
+
+  .gap-y-#{$name} {
+    --row-gap: var(--space-#{$name});
+    gap: var(--row-gap);
+  }
+}
+
+// Auto margins
+.m-auto { margin: auto; }
+.mx-auto { margin-inline: auto; }
+.my-auto { margin-block: auto; }
 
 // Functions
 @function spacing($key) {

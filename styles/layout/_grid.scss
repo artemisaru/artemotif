@@ -1,4 +1,24 @@
+@use '../abstracts' as *;
+
 .grid {
-  display: grid;
-  gap: var(--space-sm);
+  --grid-columns: 12;
+  //--column-gap: 0px;
+  //--row-gap: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  //gap: var(--row-gap) var(--column-gap);
+}
+
+.grid > * {
+  width: 100%;
+}
+
+.col {
+  width: auto;
+  flex: 1 1 0;
+}
+
+.col-content {
+  width: auto;
+  flex: 0 1 auto;
 }

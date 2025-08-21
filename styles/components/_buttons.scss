@@ -13,7 +13,7 @@
   cursor: pointer;
 
   gap: 0.5rem;
-  padding: spacing('2xs') spacing('md');
+  padding: var(--space-2xs) var(--space-lg);
   border-radius: radius('full');
   transition: transform .25s cubic-bezier(0, .1, .1, 1);
 

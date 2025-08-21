@@ -1,12 +1,24 @@
 // Grid
 $grid-columns: 12 !default;
 
+$grid-col-class-list: '';
 @for $i from 1 to $grid-columns {
+  $grid-col-class-list: '.col-#{$i}';
+  @if($i < $grid-columns) {
+    $grid-col-class-list: $grid-col-class-list + ', ';
+  }
   .grid-col-#{$i} {
-    grid-template-columns: repeat($i, 1fr);
+    --grid-columns: repeat(#{$i}, 1fr);
   }
 
   .col-#{$i} {
-    grid-column: span $i;
+    --column-span: #{$i};
+    width: calc(((100% - (var(--grid-columns) - 1) * var(--column-gap)) * var(--column-span) / var(--grid-columns)) + (var(--column-span) - 1) * var(--column-gap));
+    flex: initial;
   }
+}
+
+#{grid-col-class-list} {
+  width: calc(((100% - (var(--grid-columns) - 1) * var(--column-gap)) * var(--column-span) / var(--grid-columns)) + (var(--column-span) - 1) * var(--column-gap));
+  flex: initial;
 }

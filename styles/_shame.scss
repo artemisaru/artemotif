@@ -1,14 +1,17 @@
 // Kit helpers
 .kit-fab {
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    padding: 10px;
-    box-shadow: var(--shadow-xl);
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 10px;
+  box-shadow: var(--shadow-xl);
 }
 
 .kit-label {
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.kit-width--full {
+  width: 100%;
 }
