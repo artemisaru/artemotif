@@ -15,3 +15,68 @@
 .kit-width--full {
   width: 100%;
 }
+
+.kit-swatch {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.kit-swatch--effect {
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.kit-swatch--effect svg path {
+  fill: var(--inverse-bg-primary);
+}
+
+.kit-swatch--effect .shadow {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background: var(--bg-secondary);
+}
+
+.kit-swatch--effect .blur {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background: var(--fill-primary);
+}
+
+#shad-1 {
+  box-shadow: var(--shadow-sm);
+}
+
+#shad-2 {
+  box-shadow: var(--shadow-md);
+}
+
+#shad-3 {
+  box-shadow: var(--shadow-lg);
+}
+
+#shad-4 {
+  box-shadow: var(--shadow-xl);
+}
+
+#blur-1 {
+  backdrop-filter: var(--blur-sm);
+}
+
+#blur-2 {
+  backdrop-filter: var(--blur-md);
+}
+
+#blur-3 {
+  backdrop-filter: var(--blur-lg);
+}
+
+#blur-4 {
+  backdrop-filter: var(--blur-xl);
+}
