@@ -10,6 +10,14 @@
 .kit-label {
   text-transform: uppercase;
   font-weight: 600;
+
+  &--primary {
+    margin-block: 1px var(--space-4xs);
+  }
+
+  &--secondary {
+    margin-bottom: 15px;
+  }
 }
 
 .kit-width--full {
@@ -20,22 +28,37 @@
   width: 160px;
   height: 160px;
   overflow: hidden;
+
+  &--effect,
+  &--color {
+    position: relative;
+    background: var(--bg-secondary);
+  }
 }
 
-.kit-swatch--effect {
-  position: relative;
-  background: var(--bg-secondary);
+.swatch-light {
+  background: url(../assets/PNG/swatch-light.png);
+}
+
+.swatch-dark {
+  background: url(../assets/PNG/swatch-dark.png);
 }
 
 .kit-swatch--effect svg path {
   fill: var(--inverse-bg-primary);
 }
 
-.kit-swatch--effect .shadow {
+.kit-swatch--effect .shadow,
+.kit-swatch--color .color {
   width: 120px;
   height: 120px;
   border-radius: 60px;
   background: var(--bg-secondary);
+}
+
+.kit-swatch--color .color-text {
+  font-weight: 700;
+  font-size: 128px;
 }
 
 .kit-swatch--effect .blur {
@@ -79,4 +102,132 @@
 
 #blur-4 {
   backdrop-filter: var(--blur-xl);
+}
+
+#primary {
+  background: var(--accent-primary);
+}
+
+#secondary {
+  background: var(--accent-secondary);
+}
+
+#gradient {
+  background: var(--accent-gradient);
+}
+
+#black {
+  background: var(--neutral-black);
+}
+
+#grey {
+  background: var(--neutral-grey);
+}
+
+#grey-2 {
+  background: var(--neutral-grey-2);
+}
+
+#grey-3 {
+  background: var(--neutral-grey-3);
+}
+
+#grey-4 {
+  background: var(--neutral-grey-4);
+}
+
+#grey-5 {
+  background: var(--neutral-grey-5);
+}
+
+#grey-6 {
+  background: var(--neutral-grey-6);
+}
+
+#white {
+  background: var(--neutral-white);
+}
+
+#bgPrimary {
+  background: var(--bg-primary);
+}
+
+#bgSecondary {
+  background: var(--bg-secondary);
+}
+
+#bgTertiary {
+  background: var(--bg-tertiary);
+}
+
+#bgQuaternary {
+  background: var(--bg-quaternary);
+}
+
+#bgPrimaryInverse {
+  background: var(--inverse-bg-primary);
+}
+
+#bgSecondaryInverse {
+  background: var(--inverse-bg-secondary);
+}
+
+#bgTertiaryInverse {
+  background: var(--inverse-bg-tertiary);
+}
+
+#bgQuaternaryInverse {
+  background: var(--inverse-bg-quaternary);
+}
+
+#txtPrimary {
+  color: var(--text-primary);
+}
+
+#txtSecondary {
+  color: var(--text-secondary);
+}
+
+#txtTertiary {
+  color: var(--text-tertiary);
+}
+
+#txtQuaternary {
+  color: var(--text-quaternary);
+}
+
+#txtPrimaryInverse {
+  color: var(--inverse-text-primary);
+}
+
+#txtSecondaryInverse {
+  color: var(--inverse-text-secondary);
+}
+
+#txtTertiaryInverse {
+  color: var(--inverse-text-tertiary);
+}
+
+#txtQuaternaryInverse {
+  color: var(--inverse-text-quaternary);
+}
+
+#fillPrimary {
+  background: var(--fill-primary);
+}
+
+#fillSecondary {
+  background: var(--fill-secondary);
+}
+
+#fillTertiary {
+  background: var(--fill-tertiary);
+}
+
+#fillQuaternary {
+  background: var(--fill-quaternary);
+}
+
+#separator {
+  background: var(--separator-transparent);
 }
