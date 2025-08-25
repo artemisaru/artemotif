@@ -1294,6 +1294,21 @@ body {
   color: var(--text-primary);
 }
 
+a, a:visited {
+  color: inherit;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  will-change: color;
+  transition: color cubic-bezier(0.05, 0.2, 0.1, 1) 0.8s;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
 .container {
   width: 100%;
   margin-inline: auto;
