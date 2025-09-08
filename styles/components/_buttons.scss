@@ -12,9 +12,9 @@
   border: none;
   cursor: pointer;
 
-  gap: 0.5rem;
+  gap: var(--space-3xs);
   padding: var(--space-2xs) var(--space-lg);
-  border-radius: radius('full');
+  border-radius: var(--radius-full);
   transition: transform .25s cubic-bezier(0, .1, .1, 1);
 
   > * { z-index: 1; }
@@ -27,51 +27,51 @@
   }
 
   &--filled {
-    background: var(--inverse-bg-primary);
-    color: var(--inverse-text-primary);
+    background: var(--am-inverse-bg-primary);
+    color: var(--am-inverse-text-primary);
 
     .fill{
-      background: var(--accent-primary);
+      background: var(--am-accent-primary);
     }
 
     // Hover state (cursor target only)
     &.is-hovered {
-      background: var(--accent-primary);
-      color: var(--inverse-text-primary);
+      background: var(--am-accent-primary);
+      color: var(--am-inverse-text-primary);
       filter: invert(1);
     }
 
     // Disabled
     &:disabled,
     &.is-disabled {
-      background: var(--fill-tertiary);
-      color: var(--text-tertiary);
+      background: var(--am-fill-tertiary);
+      color: var(--am-text-tertiary);
       cursor: not-allowed;
       pointer-events: none;
     }
   }
 
   &--outline {
-    box-shadow: inset 0 0 0 2px var(--inverse-bg-primary);
+    box-shadow: inset 0 0 0 2px var(--am-inverse-bg-primary);
     background: transparent;
-    color: var(--text-primary);
+    color: var(--am-text-primary);
 
     .fill{
-      background: var(--inverse-bg-primary);
+      background: var(--am-inverse-bg-primary);
     }
 
     &.is-hovered {
       border: none;
-      color: var(--inverse-text-primary);
+      color: var(--am-inverse-text-primary);
       filter: invert(1);
     }
 
     // Disabled
     &:disabled,
     &.is-disabled {
-      box-shadow: inset 0 0 0 2px var(--fill-tertiary);
+      box-shadow: inset 0 0 0 2px var(--am-fill-tertiary);
       background: transparent;
-      color: var(--text-tertiary);
+      color: var(--am-text-tertiary);
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -79,14 +79,14 @@
 
   &--ghost {
     background: transparent;
-    color: var(--text-primary);
+    color: var(--am-text-primary);
 
     .fill{
-      background: var(--inverse-bg-primary);
+      background: var(--am-inverse-bg-primary);
     }
 
     &.is-hovered {
-      color: var(--inverse-text-primary);
+      color: var(--am-inverse-text-primary);
       filter: invert(1);
     }
 
@@ -94,32 +94,32 @@
     &:disabled,
     &.is-disabled {
       background: transparent;
-      color: var(--text-tertiary);
+      color: var(--am-text-tertiary);
       cursor: not-allowed;
       pointer-events: none;
     }
   }
 
   &--tonal {
-    background: var(--neutral-grey-5);
-    color: var(--accent-primary);
+    background: var(--am-neutral-grey-5);
+    color: var(--am-accent-primary);
 
     .fill{
-      background: var(--accent-primary);
+      background: var(--am-accent-primary);
     }
 
     // Hover state (cursor target only)
     &.is-hovered {
-      background: var(--accent-primary);
-      color: var(--inverse-text-primary);
+      background: var(--am-accent-primary);
+      color: var(--am-inverse-text-primary);
       filter: invert(1);
     }
 
     // Disabled
     &:disabled,
     &.is-disabled {
-      background: var(--fill-tertiary);
-      color: var(--text-tertiary);
+      background: var(--am-fill-tertiary);
+      color: var(--am-text-tertiary);
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -162,7 +162,7 @@
     }
 
     &:hover {
-      color: var(--inverse-text-primary);
+      color: var(--am-inverse-text-primary);
     }
   }
 }

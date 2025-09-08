@@ -1,7 +1,7 @@
 @use 'sass:map';
 
 // Variables
-$radius-scale: (
+$border-radius: (
   'sm': 0.5rem,
   'md': 1rem,
   'lg': 1.5rem,
@@ -9,7 +9,9 @@ $radius-scale: (
   'full': 1000px,
 );
 
-// Functions
-@function radius($key) {
-  @return map.get($radius-scale, $key);
+// Register variables
+@mixin border-radius() {
+  @each $name, $value in $border-radius {
+    --radius-#{$name}: #{$value};
+  }
 }

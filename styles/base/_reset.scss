@@ -26,9 +26,9 @@ html {
 
 body {
   min-height: 100%;
-  background-color: var(--bg-primary);
-  font-family: $primary-font;
-  color: var(--text-primary);
+  background-color: var(--am-bg-primary);
+  font-family: --font-primary;
+  color: var(--am-text-primary);
 }
 
 a, a:visited {
@@ -43,5 +43,5 @@ a {
 }
 
 a:hover {
-  color: var(--accent-primary);
+  color: var(--am-accent-primary);
 }

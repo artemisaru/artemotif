@@ -32,7 +32,7 @@
   &--effect,
   &--color {
     position: relative;
-    background: var(--bg-secondary);
+    background: var(--am-bg-secondary);
   }
 }
 
@@ -45,7 +45,7 @@
 }
 
 .kit-swatch--effect svg path {
-  fill: var(--inverse-bg-primary);
+  fill: var(--am-inverse-bg-primary);
 }
 
 .kit-swatch--effect .shadow,
@@ -53,7 +53,7 @@
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background: var(--bg-secondary);
+  background: var(--am-bg-secondary);
 }
 
 .kit-swatch--color .color-text {
@@ -69,7 +69,7 @@
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background: var(--fill-primary);
+  background: var(--am-fill-primary);
 }
 
 #shad-1 {
@@ -105,129 +105,129 @@
 }
 
 #primary {
-  background: var(--accent-primary);
+  background: var(--am-accent-primary);
 }
 
 #secondary {
-  background: var(--accent-secondary);
+  background: var(--am-accent-secondary);
 }
 
 #gradient {
-  background: var(--accent-gradient);
+  background: var(--am-accent-gradient);
 }
 
 #black {
-  background: var(--neutral-black);
+  background: var(--am-neutral-black);
 }
 
 #grey {
-  background: var(--neutral-grey);
+  background: var(--am-neutral-grey);
 }
 
 #grey-2 {
-  background: var(--neutral-grey-2);
+  background: var(--am-neutral-grey-2);
 }
 
 #grey-3 {
-  background: var(--neutral-grey-3);
+  background: var(--am-neutral-grey-3);
 }
 
 #grey-4 {
-  background: var(--neutral-grey-4);
+  background: var(--am-neutral-grey-4);
 }
 
 #grey-5 {
-  background: var(--neutral-grey-5);
+  background: var(--am-neutral-grey-5);
 }
 
 #grey-6 {
-  background: var(--neutral-grey-6);
+  background: var(--am-neutral-grey-6);
 }
 
 #white {
-  background: var(--neutral-white);
+  background: var(--am-neutral-white);
 }
 
 #bgPrimary {
-  background: var(--bg-primary);
+  background: var(--am-bg-primary);
 }
 
 #bgSecondary {
-  background: var(--bg-secondary);
+  background: var(--am-bg-secondary);
 }
 
 #bgTertiary {
-  background: var(--bg-tertiary);
+  background: var(--am-bg-tertiary);
 }
 
 #bgQuaternary {
-  background: var(--bg-quaternary);
+  background: var(--am-bg-quaternary);
 }
 
 #bgPrimaryInverse {
-  background: var(--inverse-bg-primary);
+  background: var(--am-inverse-bg-primary);
 }
 
 #bgSecondaryInverse {
-  background: var(--inverse-bg-secondary);
+  background: var(--am-inverse-bg-secondary);
 }
 
 #bgTertiaryInverse {
-  background: var(--inverse-bg-tertiary);
+  background: var(--am-inverse-bg-tertiary);
 }
 
 #bgQuaternaryInverse {
-  background: var(--inverse-bg-quaternary);
+  background: var(--am-inverse-bg-quaternary);
 }
 
 #txtPrimary {
-  color: var(--text-primary);
+  color: var(--am-text-primary);
 }
 
 #txtSecondary {
-  color: var(--text-secondary);
+  color: var(--am-text-secondary);
 }
 
 #txtTertiary {
-  color: var(--text-tertiary);
+  color: var(--am-text-tertiary);
 }
 
 #txtQuaternary {
-  color: var(--text-quaternary);
+  color: var(--am-text-quaternary);
 }
 
 #txtPrimaryInverse {
-  color: var(--inverse-text-primary);
+  color: var(--am-inverse-text-primary);
 }
 
 #txtSecondaryInverse {
-  color: var(--inverse-text-secondary);
+  color: var(--am-inverse-text-secondary);
 }
 
 #txtTertiaryInverse {
-  color: var(--inverse-text-tertiary);
+  color: var(--am-inverse-text-tertiary);
 }
 
 #txtQuaternaryInverse {
-  color: var(--inverse-text-quaternary);
+  color: var(--am-inverse-text-quaternary);
 }
 
 #fillPrimary {
-  background: var(--fill-primary);
+  background: var(--am-fill-primary);
 }
 
 #fillSecondary {
-  background: var(--fill-secondary);
+  background: var(--am-fill-secondary);
 }
 
 #fillTertiary {
-  background: var(--fill-tertiary);
+  background: var(--am-fill-tertiary);
 }
 
 #fillQuaternary {
-  background: var(--fill-quaternary);
+  background: var(--am-fill-quaternary);
 }
 
 #separator {
-  background: var(--separator-transparent);
+  background: var(--am-separator-transparent);
 }

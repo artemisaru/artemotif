@@ -6,11 +6,16 @@ import.meta.glob('../assets/icons/*.svg', { eager: true });
 
 // Kit helpers
 const toggleButton = document.getElementById('themeToggle');
+
 const swatches = document.querySelectorAll('.kit-swatch--color');
 
 toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('theme-dark');
-  document.body.classList.toggle('theme-light');
+  const currentTheme = document.body.dataset.theme;
+  if (currentTheme === 'light') {
+    document.body.dataset.theme = 'dark';
+  } else {
+    document.body.dataset.theme = 'light';
+  }
   swatches.forEach(swatch => {
     swatch.classList.toggle('swatch-dark');
     swatch.classList.toggle('swatch-light');

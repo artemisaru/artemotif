@@ -1,168 +1,119 @@
 @use './breakpoints' as *;
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:meta';
 @use 'sass:map';
+
 // Variables
+$font-family: (
+  'primary': 'Aspekta Variable, sans-serif',
+  'accent': 'Playfair Display, serif'
+) !default;
 
-// Artemotif Typefaces
-$primary-font: 'Aspekta Variable';
-$accent-font: 'Playfair Display';
+$font-size: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'md': (1.155rem, 1.333rem),
+  'lg': (1.333rem, 1.777rem),
+  'xl': (1.777rem, 2.369rem),
+  '2xl': (2.052rem, 3.157rem),
+  '3xl': (2.369rem, 4.209rem),
+  '4xl': (3.157rem, 5.61rem)
+) !default;
 
-// Font Weights
-$regular: 400;
-$medium: 500;
-$semi-bold: 600;
-$bold: 700;
-$extra-bold: 800;
+$font-weight: (
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800
+) !default;
 
-// Trackings
-$letter-spacings: (
-  h1: -0.25px,
-  h2: -0.2px,
-  h3: -0.2px,
-  h4: 0px,
-  h5: 0px,
-  h6: 0.2px,
-  body: 0.2px,
-  t-label: 0.3px,
-  b-small: 0.3px
+$line-height: (
+  'xs': 1.1,
+  'sm': 1.2,
+  'md': 1.3,
+  'lg': 1.5
+) !default;
+
+$letter-spacing: (
+  '0': 0px,
+  'xs': -0.25px,
+  'sm': -0.2px,
+  'md': 0.2px,
+  'lg': 0.3px
+) !default;
+
+$text-style: (
+  'display-lg': ('4xl', 'bold', 'xs', 'xs'),  // size, weight, line-height, tracking
+  'display-sm': ('3xl', 'bold', 'sm', 'sm'),
+  'headline-lg': ('2xl', 'bold', 'sm', 'sm'),
+  'headline-sm': ('xl', 'bold', 'sm', '0'),
+  'subheadline-lg': ('lg', 'semi-bold', 'md', '0'),
+  'subheadline-sm': ('md', 'semi-bold', 'md', 'md'),
+  'body-lg': ('base', 'regular', 'md', 'md'),
+  'body-sm': ('xs', 'regular', 'md', 'lg'),
+  'label-lg': ('sm', 'regular', 'md', 'lg'),
+  'label-sm': ('xs', 'regular', 'md', 'lg')
 );
 
-// Desktop Typescale
-$font-sizes-desktop: (
-  'h1': 5.610rem,
-  'h2': 4.209rem,
-  'h3': 3.157rem,
-  'h4': 2.369rem,
-  'h5': 1.777rem,
-  'h6': 1.333rem,
-  'body': 1.000rem,
-  'label': 0.875rem,
-  'small': 0.750rem,
-);
-
-$line-heights-desktop: (
-  'h1': 100px,
-  'h2': 80px,
-  'h3': 60px,
-  'h4': 44px,
-  'h5': 36px,
-  'h6': 28px,
-  'body': 20px,
-  'label': 20px,
-  'small': 16px,
-);
-
-// Tablet Typescale
-$font-sizes-tablet: (
-  'h1': 4.209rem,
-  'h2': 3.157rem,
-  'h3': 2.735rem,
-  'h4': 2.052rem,
-  'h5': 1.539rem,
-  'h6': 1.155rem,
-  'body': 1.000rem,
-  'label': 0.875rem,
-  'small': 0.750rem,
-);
-
-$line-heights-tablet: (
-  'h1': 80px,
-  'h2': 60px,
-  'h3': 52px,
-  'h4': 40px,
-  'h5': 32px,
-  'h6': 24px,
-  'body': 20px,
-  'label': 20px,
-  'small': 16px,
-);
-
-// Mobile Typescale
-$font-sizes-mobile: (
-  'h1': 3.157rem,
-  'h2': 2.369rem,
-  'h3': 2.052rem,
-  'h4': 1.777rem,
-  'h5': 1.333rem,
-  'h6': 1.155rem,
-  'body': 1.000rem,
-  'label': 0.875rem,
-  'small': 0.750rem,
-);
-
-$line-heights-mobile: (
-  'h1': 60px,
-  'h2': 44px,
-  'h3': 40px,
-  'h4': 36px,
-  'h5': 28px,
-  'h6': 24px,
-  'body': 20px,
-  'label': 20px,
-  'small': 16px,
-);
-
-$text-styles: (
-  'display-lg': 'h1',
-  'display-sm': 'h2',
-  'headline-lg': 'h3',
-  'headline-sm': 'h4',
-  'subheadline-lg': 'h5',
-  'subheadline-sm': 'h6',
-  'body-lg': 'body',
-  'body-sm': 'small',
-  'label-lg': 'label',
-  'label-sm': 'small',
-);
-
-// Mixins
-
-// Register text styles
-@mixin font-style($element, $breakpoint: 'desktop') {
-  @if $breakpoint == 'desktop' {
-    font-size: map.get($font-sizes-desktop, $element);
-    line-height: map.get($line-heights-desktop, $element);
-    letter-spacing: map.get($letter-spacings, $element);
-  } @else if $breakpoint == 'tablet' {
-    font-size: map.get($font-sizes-tablet, $element);
-    line-height: map.get($line-heights-tablet, $element);
-    letter-spacing: map.get($letter-spacings, $element);
-  } @else if $breakpoint == 'mobile' {
-    font-size: map.get($font-sizes-mobile, $element);
-    line-height: map.get($line-heights-mobile, $element);
-    letter-spacing: map.get($letter-spacings, $element);
+// Register variables
+@mixin font-families() {
+  @each $name, $value in $font-family {
+    --font-#{$name}: #{$value};
   }
 }
 
-// Generate text styles
-@mixin responsive-font-style($map) {
-  @media (max-width: $breakpoint-mobile) {
-    @each $token, $element in $map {
-      .#{$token} {
-        font-family: $primary-font;
-        @include font-style($element, 'mobile')
-      }
-    }
-  }
-  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px}) {
-    @each $token, $element in $map {
-      .#{$token} {
-        font-family: $primary-font;
-        @include font-style($element, 'tablet')
-      }
-    }
-  }
-  @media (min-width: $breakpoint-desktop) {
-    @each $token, $element in $map {
-      .#{$token} {
-        font-family: $primary-font;
-        @include font-style($element, 'desktop')
-      }
+@mixin fluid-font-sizes() {
+  @each $name, $value in $font-size {
+    @if meta.type-of($value) == 'list' {
+      $min: list.nth($value, 1);
+      $max: list.nth($value, 2);
+      $min-break: map.get($breakpoints, 'sm');
+      $max-break: map.get($breakpoints, 'lg');
+
+      $slope: math.div($max - $min, $max-break - $min-break);
+      $y: $slope * 100vw;
+      $x: $min - $slope * $min-break;
+
+      --text-#{$name}: clamp(#{$min}, calc(#{$x} + #{$y}), #{$max});
+    } @else {
+      --text-#{$name}: #{$value};
     }
   }
 }
 
-// Functions
+@mixin font-weights() {
+  @each $name, $value in $font-weight {
+    --font-weight-#{$name}: #{$value};
+  }
+}
 
-@include responsive-font-style($text-styles);
+@mixin line-heights() {
+  @each $name, $value in $line-height {
+    --line-height-#{$name}: #{$value};
+  }
+}
 
+@mixin letter-spacings() {
+  @each $name, $value in $letter-spacing {
+    --tracking-#{$name}: #{$value};
+  }
+}
 
+// Generate classes
+@each $name, $value in $text-style {
+  $size: list.nth($value, 1);
+  $weight: list.nth($value, 2);
+  $height: list.nth($value, 3);
+  $tracking: list.nth($value, 4);
+
+  .#{$name} {
+    font-family: var(--font-primary);
+    font-size: var(--text-#{$size});
+    font-weight: var(--font-weight-#{$weight});
+    line-height: var(--line-height-#{$height});
+    letter-spacing: var(--tracking-#{$tracking});
+  }
+}

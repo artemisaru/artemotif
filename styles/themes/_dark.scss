@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
-@include generate-theme(
-  'theme-dark',
-  $dark-colors,
-  $dark-elevation,
-  $blur
-);
+[data-theme=dark] {
+  /* colors */
+  @include dark-colors();
+  /* box-shadow */
+  @include dark-elevation();
+}

@@ -1,8 +1,22 @@
 @use '../abstracts' as *;
 
 :root {
-  @include register-color-variables($light-colors);
-  @include register-theme-variables($light-elevation, 'shadow');
-  @include register-theme-variables($blur, 'blur');
-  @include spacing-vars();
+  /* spacing */
+  @include fluid-spacing();
+  /* grid spacing */
+  @include fluid-grid-spacing();
+  /* font-family */
+  @include font-families();
+  /* font-size */
+  @include fluid-font-sizes();
+  /* font-weight */
+  @include font-weights();
+  /* line-height */
+  @include line-heights();
+  /* letter-spacing */
+  @include letter-spacings();
+  /* blur */
+  @include blur();
+  /* border-radius */
+  @include border-radius();
 }

@@ -3,11 +3,11 @@
 // Themed elevation Stiles
 $light-elevation: (
   'sm': (
-    0px 0px 16px -4px rgba(16, 24, 40, 0.08), 
+    0px 0px 16px -4px rgba(16, 24, 40, 0.08),
     0px 0px 6px -2px rgba(16, 24, 40, 0.03)
   ),
   'md': (
-    0px 0px 24px -4px rgba(16, 24, 40, 0.08), 
+    0px 0px 24px -4px rgba(16, 24, 40, 0.08),
     0px 0px 8px -4px rgba(16, 24, 40, 0.03)
   ),
   'lg': 0px 0px 48px -12px rgba(16, 24, 40, 0.18),
@@ -34,3 +34,22 @@ $blur: (
   'lg': blur(12px),
   'xl': blur(20px)
 );
+
+// Register variables
+@mixin light-elevation() {
+  @each $name, $value in $light-elevation {
+    --shadow-#{$name}: #{$value};
+  }
+}
+
+@mixin dark-elevation() {
+  @each $name, $value in $dark-elevation {
+    --shadow-#{$name}: #{$value};
+  }
+}
+
+@mixin blur() {
+  @each $name, $value in $blur {
+    --blur-#{$name}: #{$value};
+  }
+}

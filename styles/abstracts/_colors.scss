@@ -11,7 +11,7 @@ $brand-gradient-1: linear-gradient(103.04deg, $brand-tertiary 10.42%, $brand-sec
 $brand-gradient-2: linear-gradient(103.04deg, $brand-tertiary 10.42%, $brand-secondary-2 100%);
 
 // Neutral Color Palette -> Specific to Artemotif
-// $neutral-0: $brand-primary-1
+$neutral-0: #121110;
 $neutral-1: #1a1815;
 $neutral-2: #292723;
 $neutral-3: #383631;
@@ -23,66 +23,75 @@ $neutral-8: #c7c1af;
 $neutral-9: #d1cbb8;
 $neutral-10: #e5dfca;
 $neutral-11: #f2ebd5;
-// $neutral-12: $brand-primary-2
+$neutral-12: #faf4e1;
 
 // Themed color groups & tokens
 $light-colors: (
-  accent: (
+  'accent': (
     'primary': $brand-secondary-2,
     'secondary': $brand-tertiary,
-    'gradient': $brand-gradient-2
+    'gradient': $brand-gradient-2,
   ),
-  neutral: (
+
+  'neutral': (
     'grey': $neutral-6,
     'grey-2': $neutral-7,
     'grey-3': $neutral-8,
     'grey-4': $neutral-9,
     'grey-5': $neutral-10,
     'grey-6': $neutral-11,
-    'white': $brand-primary-2,
-    'black': $brand-primary-1
+    'white': $neutral-12,
+    'black': $neutral-0,
   ),
-  bg: (
-    'primary': $brand-primary-2,
+
+  'bg': (
+    'primary': $neutral-12,
     'secondary': $neutral-11,
-    'tertiary': $brand-primary-2
+    'tertiary': $neutral-10,
+    'quaternary': $neutral-9,
   ),
-  inverse-bg: (
-    'primary': $brand-primary-1,
+
+  'inverse-bg': (
+    'primary': $neutral-0,
     'secondary': $neutral-1,
     'tertiary': $neutral-2,
-    'quaternary': $neutral-3
+    'quaternary': $neutral-3,
   ),
-  text: (
-    'primary': $brand-primary-1,
+
+  'text': (
+    'primary': $neutral-0,
     'secondary': rgba(41, 39, 35, 0.6),
     'tertiary': rgba(41, 39, 35, 0.3),
-    'quaternary': rgba(41, 39, 35, 0.18)
+    'quaternary': rgba(41, 39, 35, 0.18),
   ),
-  inverse-text: (
-    'primary': $brand-primary-2,
+
+  'inverse-text': (
+    'primary': $neutral-12,
     'secondary': rgba(230, 224, 204, 0.6),
     'tertiary': rgba(230, 224, 204, 0.3),
-    'quaternary': rgba(230, 224, 204, 0.16)
+    'quaternary': rgba(230, 224, 204, 0.16),
   ),
-  fill: (
+
+  'fill': (
     'primary': rgba(128, 124, 113, 0.2),
     'secondary': rgba(128, 124, 113, 0.16),
     'tertiary': rgba(128, 124, 113, 0.12),
-    'quaternary': rgba(128, 124, 113, 0.08)
+    'quaternary': rgba(128, 124, 113, 0.08),
   ),
-  separator: (
-    'transparent': rgba(153, 145, 122, 0.3)
+
+  'separator': (
+    'transparent': rgba(153, 145, 122, 0.3),
   )
 );
 
 $dark-colors: (
-  accent: (
+  'accent': (
     'primary': $brand-secondary-1,
     'secondary': $brand-tertiary,
-    'gradient': $brand-gradient-1
+    'gradient': $brand-gradient-1,
     ),
-  neutral: (
+
+  'neutral': (
     'grey': $neutral-6,
     'grey-2': $neutral-5,
     'grey-3': $neutral-4,
@@ -90,45 +99,67 @@ $dark-colors: (
     'grey-5': $neutral-2,
     'grey-6': $neutral-1,
     'black': $brand-primary-1,
-    'white': $brand-primary-2
+    'white': $brand-primary-2,
   ),
-  bg: (
-    'primary': $brand-primary-1,
+
+  'bg': (
+    'primary': $neutral-0,
     'secondary': $neutral-1,
     'tertiary': $neutral-2,
-    'quaternary': $neutral-3
+    'quaternary': $neutral-3,
   ),
-  inverse-bg: (
-    'primary': $brand-primary-2,
+
+  'inverse-bg': (
+    'primary': $neutral-12,
     'secondary': $neutral-11,
-    'tertiary': $brand-primary-2
+    'tertiary': $neutral-10,
+    'quaternary': $neutral-9,
   ),
-  text: (
-    'primary': $brand-primary-2,
+
+  'text': (
+    'primary': $neutral-12,
     'secondary': rgba(230, 224, 204, 0.6),
     'tertiary': rgba(230, 224, 204, 0.3),
-    'quaternary': rgba(230, 224, 204, 0.16)
+    'quaternary': rgba(230, 224, 204, 0.16),
   ),
-  inverse-text: (
-    'primary': $brand-primary-1,
+
+  'inverse-text': (
+    'primary': $neutral-0,
     'secondary': rgba(41, 39, 35, 0.6),
     'tertiary': rgba(41, 39, 35, 0.3),
-    'quaternary': rgba(41, 39, 35, 0.18)
+    'quaternary': rgba(41, 39, 35, 0.18),
   ),
-  fill: (
+
+  'fill': (
     'primary': rgba(128, 124, 113, 0.36),
     'secondary': rgba(128, 124, 113, 0.32),
     'tertiary': rgba(128, 124, 113, 0.24),
-    'quaternary': rgba(128, 124, 113, 0.18)
+    'quaternary': rgba(128, 124, 113, 0.18),
   ),
-  separator: (
-    'transparent': rgba(51, 50, 49, 0.6)
+
+  'separator': (
+    'transparent': rgba(51, 50, 49, 0.6),
   )
 );
 
-// Mixins
+// Register variables
+@mixin light-colors() {
+  @each $group, $tokens in $light-colors {
+    @each $name, $value in $tokens {
+      --am-#{$group}-#{$name}: #{$value};
+    }
+  }
+}
 
-// Register color classes
+@mixin dark-colors() {
+  @each $group, $tokens in $dark-colors {
+    @each $name, $value in $tokens {
+      --am-#{$group}-#{$name}: #{$value};
+    }
+  }
+}
+
+// Register classes
 @mixin register-color-classes($map, $prefix, $var-prefix) {
   @each $name, $value in $map {
     .#{$prefix}-#{$name} {
@@ -136,8 +167,6 @@ $dark-colors: (
     }
   }
 }
-
-// Functions
 
 // Generate color classes
 @each $group, $tokens in $dark-colors {

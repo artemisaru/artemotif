@@ -1,49 +1,99 @@
+@use './breakpoints' as *;
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:meta';
 @use 'sass:map';
 
 // Variables
-$spacing-scale: (
+$spacing: (
   '0': 0px,
   '4xs': 0.25rem, // 4px
   '3xs': 0.5rem,  // 8px
   '2xs': 0.75rem, // 12px
   'xs': 1rem,     // 16px
   'sm': 1.25rem,  // 20px
-  'md': 1.5rem,   // 24px
-  'lg': 2rem,     // 32px
-  'xl': 2.5rem,   // 40px
-  '2xl': 3rem,    // 48px
-  '3xl': 4rem,    // 64px
-  '4xl': 6.25rem, // 100px
+  'md': (1.5rem, 1.75rem),   // 24px
+  'lg': (2rem, 3rem),     // 32px
+  'xl': (2.5rem, 3.5rem),   // 40px
+  '2xl': (3rem, 4rem),    // 48px
+  '3xl': (4rem, 6rem),    // 64px
+  '4xl': (6.25rem, 10rem), // 100px
 );
 
-// Mixins
-@mixin spacing-vars() {
-  @each $key, $val in $spacing-scale {
-    --space-#{$key}: #{$val};
+$grid-spacing: (
+  'margin': (1rem, 6.25rem),
+  'gutter': (0.5rem, 1.25rem)
+);
+
+// Register variables
+@mixin fluid-spacing() {
+  @each $name, $value in $spacing {
+    @if meta.type-of($value) == 'list' {
+      $min: list.nth($value, 1);
+      $max: list.nth($value, 2);
+      $min-break: map.get($breakpoints, 'sm');
+      $max-break: map.get($breakpoints, 'lg');
+
+      $slope: math.div($max - $min, $max-break - $min-break);
+      $y: $slope * 100vw;
+      $x: $min - $slope * $min-break;
+
+      --space-#{$name}: clamp(#{$min}, calc(#{$x} + #{$y}), #{$max});
+    } @else {
+      --space-#{$name}: #{$value};
+    }
   }
 }
 
-// Spacing
-@each $name, $value in $spacing-scale {
-  // Margin
-  .m-#{$name} { margin: $value; }
-  .mt-#{$name} { margin-top: $value; }
-  .mr-#{$name} { margin-right: $value; }
-  .mb-#{$name} { margin-bottom: $value; }
-  .ml-#{$name} { margin-left: $value; }
-  .mx-#{$name} { margin-inline: $value; }
-  .my-#{$name} { margin-block: $value; }
+@mixin fluid-grid-spacing() {
+  @each $name, $value in $grid-spacing {
+    @if meta.type-of($value) == 'list' {
+      $min: list.nth($value, 1);
+      $max: list.nth($value, 2);
+      $min-break: map.get($breakpoints, 'sm');
+      $max-break: map.get($breakpoints, 'lg');
 
-  // Padding
-  .p-#{$name} { padding: $value; }
-  .pt-#{$name} { padding-top: $value; }
-  .pr-#{$name} { padding-right: $value; }
-  .pb-#{$name} { padding-bottom: $value; }
-  .pl-#{$name} { padding-left: $value; }
-  .px-#{$name} { padding-inline: $value; }
-  .py-#{$name} { padding-block: $value; }
+      $slope: math.div($max - $min, $max-break - $min-break);
+      $y: $slope * 100vw;
+      $x: $min - $slope * $min-break;
 
-  // Gaps
+      --grid-#{$name}: clamp(#{$min}, calc(#{$x} + #{$y}), #{$max});
+    } @else {
+      --grid-#{$name}: #{$value};
+    }
+  }
+}
+
+// Generate classes
+
+/* margin */
+@each $name, $value in $spacing {
+  .m-#{$name} { margin: var(--space-#{$name}); }
+  .mt-#{$name} { margin-top: var(--space-#{$name}); }
+  .mr-#{$name} { margin-right: var(--space-#{$name}); }
+  .mb-#{$name} { margin-bottom: var(--space-#{$name}); }
+  .ml-#{$name} { margin-left: var(--space-#{$name}); }
+  .mx-#{$name} { margin-inline: var(--space-#{$name}); }
+  .my-#{$name} { margin-block: var(--space-#{$name}); }
+}
+
+.m-auto { margin: auto; }
+.mx-auto { margin-inline: auto; }
+.my-auto { margin-block: auto; }
+
+/* padding */
+@each $name, $value in $spacing {
+  .p-#{$name} { padding: var(--space-#{$name}); }
+  .pt-#{$name} { padding-top: var(--space-#{$name}); }
+  .pr-#{$name} { padding-right: var(--space-#{$name}); }
+  .pb-#{$name} { padding-bottom: var(--space-#{$name}); }
+  .pl-#{$name} { padding-left: var(--space-#{$name}); }
+  .px-#{$name} { padding-inline: var(--space-#{$name}); }
+  .py-#{$name} { padding-block: var(--space-#{$name}); }
+}
+
+/* gap */
+@each $name, $value in $spacing {
   .gap-#{$name} {
     --row-gap: var(--space-#{$name});
     --column-gap: var(--space-#{$name});
@@ -61,12 +111,6 @@ $spacing-scale: (
   }
 }
 
-// Auto margins
-.m-auto { margin: auto; }
-.mx-auto { margin-inline: auto; }
-.my-auto { margin-block: auto; }
-
-// Functions
 @function spacing($key) {
-  @return map.get($spacing-scale, $key);
+  @return map.get($spacing, $key);
 }

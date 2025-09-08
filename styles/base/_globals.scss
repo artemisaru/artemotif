@@ -7,7 +7,7 @@
   left: 0;
   width: 24px;
   height: 24px;
-  border-radius: radius('full');
+  border-radius: var(--radius-full);
   background: #fbf4e0;
   pointer-events: none;
   z-index: 8888;
