@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/artemisaru/artemotif#readme",
   "devDependencies": {
-    "vite": "^7.0.6",
+    "sass": "^1.93.2",
+    "vite": "^7.1.7",
     "vite-plugin-svg-sprite": "^0.6.3"
   }
 }
