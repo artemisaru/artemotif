@@ -163,7 +163,7 @@ $dark-colors: (
 @mixin register-color-classes($map, $prefix, $var-prefix) {
   @each $name, $value in $map {
     .#{$prefix}-#{$name} {
-      color: var(--#{$var-prefix}-#{$name})
+      color: var(--am-#{$var-prefix}-#{$name})
     }
   }
 }
