@@ -1200,11 +1200,9 @@ body {
   color: var(--am-text-primary);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
-}
-
-a {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
   will-change: color;
@@ -1340,6 +1338,11 @@ a:hover {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--tracking-md);
   gap: var(--space-3xs);
   padding: var(--space-2xs) var(--space-lg);
   border-radius: var(--radius-full);
@@ -1452,6 +1455,31 @@ a:hover {
 }
 .btn.btn--fill:hover, .btn--fill:hover {
   color: var(--am-inverse-text-primary);
+}
+
+.link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--tracking-md);
+  will-change: color;
+  transition: color cubic-bezier(0.05, 0.2, 0.1, 1) 0.8s;
+  text-decoration: none;
+}
+.link--underline {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+.link--sm {
+  font-size: var(--text-sm);
+  padding-block: 3px;
+}
+.link--lg {
+  font-size: var(--text-base);
+  padding-block: var(--space-4xs);
+}
+.link:hover {
+  color: var(--am-accent-primary);
 }
 
 .kit-fab {
