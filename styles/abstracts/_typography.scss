@@ -42,7 +42,8 @@ $letter-spacing: (
   'xs': -0.25px,
   'sm': -0.2px,
   'md': 0.2px,
-  'lg': 0.3px
+  'lg': 0.3px,
+  'xl': 0.5px
 ) !default;
 
 $text-style: (
@@ -54,8 +55,8 @@ $text-style: (
   'subheadline-sm': ('md', 'semi-bold', 'md', 'md'),
   'body-lg': ('base', 'regular', 'md', 'md'),
   'body-sm': ('xs', 'regular', 'md', 'lg'),
-  'label-lg': ('sm', 'regular', 'md', 'lg'),
-  'label-sm': ('xs', 'regular', 'md', 'lg')
+  'label-lg': ('sm', 'regular', 'md', 'xl'),
+  'label-sm': ('xs', 'regular', 'md', 'xl')
 );
 
 // Register variables

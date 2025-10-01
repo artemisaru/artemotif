@@ -1129,7 +1129,7 @@ grid-col-class-list {
   font-size: var(--text-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-md);
-  letter-spacing: var(--tracking-lg);
+  letter-spacing: var(--tracking-xl);
 }
 
 .label-sm {
@@ -1137,7 +1137,7 @@ grid-col-class-list {
   font-size: var(--text-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-md);
-  letter-spacing: var(--tracking-lg);
+  letter-spacing: var(--tracking-xl);
 }
 
 .custom-cursor {
@@ -1812,6 +1812,7 @@ a:hover {
   --tracking-sm: -0.2px;
   --tracking-md: 0.2px;
   --tracking-lg: 0.3px;
+  --tracking-xl: 0.5px;
   /* blur */
   --blur-sm: blur(4px);
   --blur-md: blur(8px);
