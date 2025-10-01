@@ -31,6 +31,10 @@ body {
   color: var(--am-text-primary);
 }
 
+ol, ul, li, menu {
+  list-style: none;
+}
+
 a, 
 a:visited {
   color: inherit;
