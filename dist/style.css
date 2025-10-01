@@ -1718,10 +1718,10 @@ a:hover {
   --am-fill-quaternary: rgba(128, 124, 113, 0.18);
   --am-separator-transparent: rgba(51, 50, 49, 0.6);
   /* box-shadow */
-  --shadow-sm: 0px 0px 16px -4px rgba(0, 0, 0, 0.3), 0px 0px 6px -2px rgba(0, 0, 0, 0.15);
-  --shadow-md: 0px 0px 24px -4px rgba(0, 0, 0, 0.3), 0px 0px 8px -4px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0px 0px 48px -12px rgba(0, 0, 0, 0.6);
-  --shadow-xl: 0px 0px 64px -12px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0px 1px 3px 1px rgba(56, 54, 49, 0.3), 0px 1px 2px 0px rgba(56, 54, 49, 0.1);
+  --shadow-md: 0px 1px 11px 1px rgba(56, 54, 49, 0.3), 0px 1px 4px -1px rgba(56, 54, 49, 0.1);
+  --shadow-lg: 1px 0px 22px -3px rgba(56, 54, 49, 0.6);
+  --shadow-xl: 1px 0px 38px -3px rgba(56, 54, 49, 0.5);
 }
 
 :root, [data-theme=light] {
@@ -1759,10 +1759,10 @@ a:hover {
   --am-fill-quaternary: rgba(128, 124, 113, 0.08);
   --am-separator-transparent: rgba(153, 145, 122, 0.3);
   /* box-shadow */
-  --shadow-sm: 0px 0px 16px -4px rgba(16, 24, 40, 0.08), 0px 0px 6px -2px rgba(16, 24, 40, 0.03);
-  --shadow-md: 0px 0px 24px -4px rgba(16, 24, 40, 0.08), 0px 0px 8px -4px rgba(16, 24, 40, 0.03);
-  --shadow-lg: 0px 0px 48px -12px rgba(16, 24, 40, 0.18);
-  --shadow-xl: 0px 0px 64px -12px rgba(16, 24, 40, 0.14);
+  --shadow-sm: 0px 1px 3px 1px rgba(173, 168, 153, 0.15), 0px 1px 2px 0px rgba(173, 168, 153, 0.05);
+  --shadow-md: 0px 1px 11px 1px rgba(173, 168, 153, 0.15), 0px 1px 4px -1px rgba(173, 168, 153, 0.05);
+  --shadow-lg: 1px 0px 22px -3px rgba(173, 168, 153, 0.3);
+  --shadow-xl: 1px 0px 38px -3px rgba(173, 168, 153, 0.26);
 }
 
 :root {
