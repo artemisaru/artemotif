@@ -1486,6 +1486,18 @@ a:hover {
   color: var(--am-accent-primary);
 }
 
+.separator {
+  background: var(--am-separator-transparent);
+}
+.separator--vertical {
+  width: 1px;
+  height: -webkit-fill-available;
+}
+.separator--horizontal {
+  width: -webkit-fill-available;
+  height: 1px;
+}
+
 .kit-fab {
   position: fixed;
   top: 1.5rem;

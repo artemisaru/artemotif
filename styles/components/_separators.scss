@@ -1,0 +1,13 @@
+.separator {
+  background: var(--am-separator-transparent);
+
+  &--vertical {
+    width: 1px;
+    height: -webkit-fill-available;
+  }
+
+  &--horizontal {
+    width: -webkit-fill-available;
+    height: 1px;
+  }
+}
