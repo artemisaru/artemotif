@@ -1500,10 +1500,11 @@ a:hover {
 
 .kit-fab {
   position: fixed;
-  top: 1.5rem;
+  top: 6rem;
   right: 1.5rem;
   padding: 10px;
   box-shadow: var(--shadow-xl);
+  z-index: 88;
 }
 
 .kit-label {
