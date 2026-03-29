@@ -19,6 +19,299 @@
   </style>
 </head>
 <body data-theme="light">
+  <!-- Classic header -->
+  <header class="header header--classic">
+    <div class="container header__inner justify-between">
+      <!-- Logo -->
+      <a href="https://www.artemisaru.com/" class="header__logo link cursor-target">
+        <img src="./assets/SVG/logo-mark_L.svg" alt="Logo mark" class="logo logo--onLight">
+        <img src="./assets/SVG/logo-mark_D.svg" alt="Logo mark" class="logo logo--onDark">
+      </a>
+      <!-- Trailing icons -->
+      <div class="trailing-icons">
+        <!-- Bolt - will show on header hover -->
+        <button class="btn btn--ghost icon-btn--stretched btn--cursor" id="bolt">
+          <svg class="icon icon--lg">
+            <use href="#icon-bolt"></use>
+          </svg>
+        </button>
+        <button class="btn btn--ghost icon-btn--stretched btn--cursor open__menu">
+          <svg class="icon icon--lg">
+            <use href="#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Menu (toggleable) -->
+      <div class="menu">
+        <div class="menu__container">
+          <div class="menu__inner">
+            <div class="menu__header">
+              <div class="trailing-icons">
+                <button class="btn btn--ghost icon-btn--stretched btn--cursor close__menu">
+                  <svg class="icon icon--lg">
+                    <use href="#icon-chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="menu__body">
+              <nav class="menu__nav">
+                <li>
+                  <a href="#" class="link link--lg cursor-target">
+                    <figure class="nav-thumbnail">
+                      <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                    </figure>
+                    <span class="subheadline-sm">Homepage</span>
+                  </a>
+                </li>
+                <div class="separator separator--horizontal"></div>
+                <li>
+                  <a href="#" class="link link--lg cursor-target">
+                    <figure class="nav-thumbnail">
+                      <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                    </figure>
+                    <span class="subheadline-sm">About</span>
+                  </a>
+                </li>
+                <div class="separator separator--horizontal"></div>
+                <li>
+                  <a href="#" class="link link--lg cursor-target">
+                    <figure class="nav-thumbnail">
+                      <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                    </figure>
+                    <span class="subheadline-sm">Work</span>
+                  </a>
+                </li>
+                <div class="separator separator--horizontal"></div>
+              </nav>
+            </div>
+            
+            <div class="menu__footer">
+              <div class="social-links">
+                <li><a href="#" class="link link--underline link--lg cursor-target">Instagram</a></li>
+                <li><a href="#" class="link link--underline link--lg cursor-target">Behance</a></li>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="menu__background"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Top floating header -->
+  <header class="header header--float-up">
+    <div class="container flex justify-between items-center">
+      <!-- Logo (visible on desktop+) -->
+      <a href="https://www.artemisaru.com/" class="header__logo header__logo__Desk link cursor-target">
+        <img src="./assets/SVG/logo-mark_L.svg" alt="Logo mark" class="logo logo--onLight">
+        <img src="./assets/SVG/logo-mark_D.svg" alt="Logo mark" class="logo logo--onDark">
+      </a>
+
+      <div class="header__inner">
+        <!-- Persistant bar -->
+        <div class="header__bar">
+          <!-- Logo (hidden on desktop+) -->
+          <a href="https://www.artemisaru.com/" class="header__logo link cursor-target">
+            <img src="./assets/SVG/logo-mark_L.svg" alt="Logo mark" class="logo logo--onLight">
+            <img src="./assets/SVG/logo-mark_D.svg" alt="Logo mark" class="logo logo--onDark">
+          </a>
+          <!-- Separator (hidden on desktop+) -->
+          <div class="separator separator--vertical"></div>
+          <!-- Navigation (hidden on mobile) -->
+          <nav class="header__nav">
+            <li><a href="#" class="link link--lg cursor-target">Link</a></li>
+            <li><a href="#" class="link link--lg cursor-target">Link</a></li>
+            <li><a href="#" class="link link--lg cursor-target">Link</a></li>
+          </nav>
+          <!-- CTA button (hidden on mobile) -->
+          <button class="btn btn--filled btn--cursor header__cta">
+            <span class="body-lg btn-label">Contact</span>
+          </button>
+          <!-- Open menu button (hidden on tablet+) -->
+          <button class="btn btn--ghost icon-btn--stretched btn--cursor header__toggle" id="menuToggle">
+            <svg class="icon icon--lg">
+              <use href="#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- Menu -->
+        <div class="menu">
+          <div class="menu__background"></div>
+          <div class="menu__container">
+            <div class="menu__inner">
+              <div class="menu__header">
+                <div class="trailing-icons">
+                  <button class="btn btn--ghost icon-btn--stretched btn--cursor">
+                    <svg class="icon icon--lg">
+                      <use href="#icon-chevron-right" id="menuToggle"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="menu__body">
+                <nav class="menu__nav">
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">Homepage</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">About</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">Work</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                </nav>
+              </div>
+              
+              <div class="menu__footer">
+                <div class="social-links">
+                  <li><a href="#" class="link link--underline link--lg cursor-target">Instagram</a></li>
+                  <li><a href="#" class="link link--underline link--lg cursor-target">Behance</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trailing icons (visible on desktop+) -->
+      <div class="trailing-icons trailing-icons__Desk">
+        <!-- Bolt - will show on header hover -->
+        <button class="btn btn--ghost icon-btn--stretched btn--cursor" id="bolt">
+          <svg class="icon icon--lg">
+            <use href="#icon-bolt"></use>
+          </svg>
+        </button>
+        <button class="btn btn--ghost icon-btn--stretched btn--cursor">
+          <svg class="icon icon--lg">
+            <use href="#icon-brand-instagram"></use>
+          </svg>
+        </button>
+        <button class="btn btn--ghost icon-btn--stretched btn--cursor">
+          <svg class="icon icon--lg">
+            <use href="#icon-brand-behance"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bottom floating header -->
+  <header class="header header--float-down">
+    <div class="fixed-bg"></div>
+    <div class="container">
+      <div class="header__inner">
+        <!-- Persistant bar -->
+        <div class="header__bar" data-hover-zone>
+          <!-- Animated greeting -->
+          <div class="header__anim" >
+            <!-- Icon -->
+            <div class="header__icon cascade-target">
+              <span data-name="artemotif" class="_icon active"></span>
+              <span data-name="artemotif" aria-hidden="true" class="_icon ghost"></span>
+            </div>
+            <!-- Message -->
+            <div class="header__msg cascade-target">
+              <div class="_msg active"></div>
+              <div aria-hidden="true" class="_msg ghost"></div>
+            </div>
+          </div>
+
+          <!-- Active page -->
+          <div class="active-page home">
+            <span class="body-lg btn-label">Home</span>
+          </div>
+
+          <!-- Open menu button -->
+          <button class="btn btn--ghost icon-btn--stretched btn--cursor header__toggle" id="menuToggle">
+            <svg class="icon icon--lg">
+              <use href="#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Menu -->
+        <div class="menu">
+          <div class="menu__background"></div>
+          <div class="menu__container">
+            <div class="menu__inner">
+              <div class="menu__header">
+                <!-- Logo -->
+                <a href="https://www.artemisaru.com/" class="header__logo link cursor-target">
+                  <img src="./assets/SVG/logo-mark_L.svg" alt="Logo mark" class="logo logo--onLight">
+                  <img src="./assets/SVG/logo-mark_D.svg" alt="Logo mark" class="logo logo--onDark">
+                </a>
+                <!-- Chip button - to be developed -->
+                <a href="#" class="link link--underline link--lg cursor-target">Drop it like it's hot</a>
+              </div>
+
+              <div class="menu__body">
+                <nav class="menu__nav">
+                  <div class="separator separator--horizontal"></div>
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">Homepage</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">About</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                  <li>
+                    <a href="#" class="link link--lg cursor-target">
+                      <figure class="nav-thumbnail">
+                        <img src="./assets/PNG/swatch-dark.png" alt="Homepage Thumbnail">
+                      </figure>
+                      <span class="subheadline-sm">Work</span>
+                    </a>
+                  </li>
+                  <div class="separator separator--horizontal"></div>
+                </nav>
+              </div>
+              
+              <div class="menu__footer">
+                <div class="social-links">
+                  <li><a href="#" class="link link--underline link--lg cursor-target">Instagram</a></li>
+                  <li><a href="#" class="link link--underline link--lg cursor-target">Behance</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
   <button class="btn btn--filled icon-btn--square kit-fab btn--cursor" id="themeToggle">
     <svg class="icon icon--lg" fill="currentColor">
       <use href="#icon-sun"></use>

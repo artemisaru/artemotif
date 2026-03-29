@@ -22,5 +22,8 @@ $icon-sizes: (
 @each $name, $value in $icon-sizes {
   .icon--#{$name} {
     @include icon($name);
+    transform: rotate(0);
+    will-change: transform;
+    transition: transform .35s cubic-bezier(.645, .045, .355, 1) .05s;
   }
 }

@@ -1,5 +1,9 @@
+import { gsap } from "gsap";
+
 import initCustomCursor from './customCursor.js';
 initCustomCursor();
+import initHeaders from './header.js';
+initHeaders();
 
 // Svg sprite
 import.meta.glob('../assets/icons/*.svg', { eager: true });
