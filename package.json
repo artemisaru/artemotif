@@ -24,5 +24,8 @@
     "sass": "^1.93.2",
     "vite": "^7.1.7",
     "vite-plugin-svg-sprite": "^0.6.3"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
   }
 }
